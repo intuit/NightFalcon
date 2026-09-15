@@ -1,0 +1,15 @@
+{
+  "name": "nightfalcon-local",
+  "description": "Local marketplace shipping the NightFalcon adversarial security review plugin.",
+  "owner": {
+    "name": "NightFalcon contributors"
+  },
+  "plugins": [
+    {
+      "name": "nightfalcon",
+      "source": "./",
+      "description": "Multi-phase adversarial security review with enforced phase sequencing, debate, PoC generation, and validation.",
+      "version": "3.0.0"
+    }
+  ]
+}

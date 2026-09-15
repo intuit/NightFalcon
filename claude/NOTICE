@@ -1,0 +1,18 @@
+NightFalcon Agentic Security Harness
+Copyright 2026 NightFalcon contributors
+
+Harness source code is licensed under Apache License 2.0.
+
+Files under shared/owasp/ and each distribution's references/OWASP/ contain
+bounded adaptations of OWASP project material. Those adaptations are licensed
+under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA
+4.0), not Apache-2.0. Source URLs, editions, status, and adaptation notes are
+recorded in owasp-provenance.json and shared/owasp/ATTRIBUTION.md.
+
+OWASP Kubernetes Top Ten, MCP Top 10, and Smart Contract Top 10 source material use CC
+BY-NC-SA 4.0. Their document bodies are not bundled or adapted here; only
+identifiers, titles, and official-source links are retained as reference
+metadata.
+
+OWASP and OWASP marks are property of OWASP Foundation. NightFalcon is not
+endorsed by or affiliated with OWASP Foundation.

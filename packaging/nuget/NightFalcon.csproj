@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>nightfalcon</ToolCommandName>
+    <PackageId>nightfalcon</PackageId>
+    <Version>3.0.0</Version>
+    <Authors>Intuit</Authors>
+    <Description>Multi-client agentic security review harness</Description>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/intuit/nightfalcon</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/intuit/nightfalcon</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="../../src/nightfalcon/**/*" Link="runtime/src/nightfalcon/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="tools/net8.0/any/runtime/src/nightfalcon/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="../../claude/**/*" Link="runtime/claude/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="tools/net8.0/any/runtime/claude/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="../../codex/**/*" Link="runtime/codex/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="tools/net8.0/any/runtime/codex/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="../../cursor/**/*" Link="runtime/cursor/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="tools/net8.0/any/runtime/cursor/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="../runtime-executables.txt" Link="runtime/packaging/runtime-executables.txt" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="tools/net8.0/any/runtime/packaging/runtime-executables.txt" />
+  </ItemGroup>
+</Project>

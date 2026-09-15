@@ -1,0 +1,1844 @@
+{
+  "ports": {
+    "claude": {
+      "destination_file_count": 80,
+      "destination_scope_exclusions": [],
+      "excluded_source_file_count": 1303,
+      "excluded_source_sha256": "a656a75cf4aa1f77f04c93ca85810b522f0b3371a88cc7839ced6d15c3f39c43",
+      "files": [
+        {
+          "classification": "ADAPTED",
+          "destination": ".claude-plugin/marketplace.json",
+          "destination_sha256": "30eafbb35ca2cff5e023e017c9ef3876635a8235172baec0f84780044570220e",
+          "source": ".claude-plugin/marketplace.json",
+          "source_sha256": "2d7ace316e8d7a2a3d8e21c5225ce229998ee06c56554a01d7fca5c6a8e1fc70"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": ".claude-plugin/plugin.json",
+          "destination_sha256": "c55dad0bdc80402d46e1930532a9febe5ba91f70f1a52e83dbc1d2af21f16904",
+          "source": ".claude-plugin/plugin.json",
+          "source_sha256": "2387b4365539559c5a04cca30bc2f859178883f940201abf083cd7533f7093b2"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": ".gitignore",
+          "destination_sha256": "acd757333b49c08ad4317594ac9e5e4e1dcf934b1f0a85db0b1ae2c80a9ba494",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "AGENTS.md",
+          "destination_sha256": "822073398a0375e792ecbd871fc4c0600baf39a979bb57431200eb7b86932f8b",
+          "source": "AGENTS.md",
+          "source_sha256": "60b99269989450c896e4b07f126966cf7b79bf789e62aabb6d6ef2101a6a7ce9"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "CLAUDE.md",
+          "destination_sha256": "a32daaec859d599f51ce82696fea606e850c36860c5d130feac7d12c92b15e15",
+          "source": "CLAUDE.md",
+          "source_sha256": "4fe34bcaaa7b6bb5359bb35ff8686d96f9f78fd1c5597bd4ef094e7b9afbcaf9"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "CODE_OF_CONDUCT.md",
+          "destination_sha256": "ca4900d360cf6bdabf622a9228820d2b05ac9777aa9c562ac27b3ecf2ef70209",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "CONTRIBUTING.md",
+          "destination_sha256": "86023ea261256e015b049ae8e817df287735627d8f0523bb3929e4c03d310b71",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "LICENSE",
+          "destination_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "NOTICE",
+          "destination_sha256": "d26ea33f397e1635dfcd51c4d4fe9918fd5b624ceaa0505a1e66f113e52a2e7a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "README.md",
+          "destination_sha256": "2ce7b8aab51faaa3b8433ec9f159adb85f2f66946ad02aa321b4e8a02c044d10",
+          "source": "README.md",
+          "source_sha256": "80a074921c9c37a2dab7caf5317c394129824d492ee55083b1c54509be840ac5"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "SECURITY.md",
+          "destination_sha256": "0bfc14b6cc9b31167c40036255a8a2af963717a5bda4e856d6bab697015a8929",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "commands/nightfalcon.md",
+          "destination_sha256": "83b9bc5c715f9a4e6a3ab8d37a1d7b635a8c3c0e704b31897ce34468ecd0341b",
+          "source": "commands/nightfalcon.md",
+          "source_sha256": "1f42606adf78f4d22e9b8e9bc31a348e968f25daac94f2f2ea8d240f3ae8c20f"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "docs/nightfalcon-phase-gallery.svg",
+          "destination_sha256": "7f8accfe62e5d1cf3f68ee4f9eebb5bebd9969165be16a982a45dfaab7de6204",
+          "source": "docs/nightfalcon-phase-gallery.svg",
+          "source_sha256": "cdc40b1644d480662c2b0c7336b5237110f1cec7914b04b9be6c9a635cc5a329"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "hooks/bash-guard.py",
+          "destination_sha256": "808e92b2164a51e9b752e9ecd1e0b4726f1650b7efdad14d8e74c751433d82d6",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "hooks/hooks.json",
+          "destination_sha256": "9017fb5628e4fe69e780af8822d5259a4b165ab34710217f3d7ba7f5dcd591e5",
+          "source": "hooks/hooks.json",
+          "source_sha256": "6b8d48cfaedbb5377e991e3520f60fcd59423a77e85b4b708beda32979dccd57"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "hooks/workspace.py",
+          "destination_sha256": "da41d39b2c567aa7c696f003861d137a9d41a0433707b431e534b4b6df059869",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-0.md",
+          "destination_sha256": "07972b5948de8db47bbe9a972258d1b38fca185276bc459f515a93955c93f9f9",
+          "source": "phases/phase-0.md",
+          "source_sha256": "d7573468ce4c6afecbfdbcf97940d50d918aa250602cec0b09946514664ef0bc"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-1.md",
+          "destination_sha256": "a5943866d033d799098a585b6e348bad7a4fb3dc84afc4be0281f48103df8276",
+          "source": "phases/phase-1.md",
+          "source_sha256": "8176512872fd327ccefc749f84d6af71393074a8904aa48484ebfe640f63a85e"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-2.md",
+          "destination_sha256": "810e6b8640b448c6a6640c1645c115d86ad67586a4311ab8b78b0ddb3d1495cd",
+          "source": "phases/phase-2.md",
+          "source_sha256": "5984dbbd974c9f6d5dac458304d904276e80a9c8f43be5b8ebc911d949ccf235"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-3.md",
+          "destination_sha256": "ff0339a026af4ced828ea8c0cadc8c058fc4aff55619a951e73034becef2e649",
+          "source": "phases/phase-3.md",
+          "source_sha256": "156041e210f0427509faef8c4069a7a314c2c0ceccc8ed21c3f74978593f2f96"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-4.md",
+          "destination_sha256": "f56bc0e16ebdab1ce49910584a2f678c9424f9945a1d92b621332bd473c705f9",
+          "source": "phases/phase-4.md",
+          "source_sha256": "53117fa62c1d6ef96aca5724b25606173acd907db2fb4e765545cb5f337faa3a"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-5.md",
+          "destination_sha256": "4805b1e1840e2d5b6f1e2f51b6da29b0baaa34dd689e8700bf05e3f154f688dd",
+          "source": "phases/phase-5.md",
+          "source_sha256": "0524a62ffe9ec889461b921c78901c1f9c197826380e6e1f39731f7ac05d2771"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-6.md",
+          "destination_sha256": "cbef58ef0fea935ed55a8e129eee021bd086ff411f269aae8fc4aeab39e0c91d",
+          "source": "phases/phase-6.md",
+          "source_sha256": "06555dbda0668565b78bd96f2937882f8bfc6029ad49dbe8c5de40c2067cbcbc"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-7.md",
+          "destination_sha256": "858db80c10f17345c9f0d256a52cf970a4d2698245bf358805869dc867bf3d6c",
+          "source": "phases/phase-7.md",
+          "source_sha256": "ddfb9d25d6d438744931366674d036ea10fbfeded3442edbec689a1cc5d7209a"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-8.md",
+          "destination_sha256": "9f5ceb02df6321bf74525676fdd3559b29123d5998ca2e1892e63deb18583808",
+          "source": "phases/phase-8.md",
+          "source_sha256": "c52905c8a467afca8cda7ec07c472957b99262f42bbb29c0ad445ebac5d450ab"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "phases/phase-da.md",
+          "destination_sha256": "bda3aefe5ef21ad4c600c3f470c7b46edb532ae9b55cc0b760b498e4138bc84b",
+          "source": "phases/phase-da.md",
+          "source_sha256": "bda3aefe5ef21ad4c600c3f470c7b46edb532ae9b55cc0b760b498e4138bc84b"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "phases/phase-poc-execution.md",
+          "destination_sha256": "fae3fcd06dde5a61a44e4d17ec40e1faa9bffb4688e88fc833fc6ced316391c0",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-poc-reviewer.md",
+          "destination_sha256": "da81e90b22e8b927352f382c40300fb80480b45a7570bf5bd0e99facad7c31fc",
+          "source": "phases/phase-poc-reviewer.md",
+          "source_sha256": "c8819bbc6f2d542d276876c34c08b2f61d24565b1f04e988f478992327bf3291"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/triage-ingest.md",
+          "destination_sha256": "bd54b307048e0018df80db06621207903755270af2c318882704867fd10c0441",
+          "source": "phases/triage-ingest.md",
+          "source_sha256": "c34836b644ffaa7ac100c735b66e9e9d572eb91ec2c48c875a9d1e78577efb8e"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/OWASP/ATTRIBUTION.md",
+          "destination_sha256": "8e2292762d8aa45bd155b7c0d93cb4fe4bacb591fba9dcdbc21542cd6c766d28",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/OWASP/OWASP Framework Index.md",
+          "destination_sha256": "101a72264db3026508a1e74d9c8074e1fc972142f2b3e3c6c6635bf7e25efeab",
+          "source": "references/OWASP/OWASP Framework Index.md",
+          "source_sha256": "aa5ac370762314106989dab4c6f48fb3579b08dcb321ec7017bf63d924aa86f4"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/OWASP/OWASP_ASVS_5.0.0.md",
+          "destination_sha256": "bdba67441c1778c4a7f857eaf2bf25d99076e4b29466b4afc8349a933c7d0696",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/OWASP/OWASP_Cloud_Agentic_and_Identity.md",
+          "destination_sha256": "6a0c69b1a21b08661fa1196e896363db285925056cbe918cd58223ade5b5a14c",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/OWASP/_graph.json",
+          "destination_sha256": "ffb02093bc06d5e4c693243c29261f63fe650c968cae3ded4be01750635783e6",
+          "source": "references/OWASP/_graph.json",
+          "source_sha256": "64628965eed1f3f4404f486d4cf5bef42043932a52a13e974ecadd59b08b4282"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/OWASP/owasp-fingerprints.yaml",
+          "destination_sha256": "6961473dd270bc9210f6d587096d9d13720b9f88cc0eba210489f706b32a210e",
+          "source": "references/OWASP/owasp-fingerprints.yaml",
+          "source_sha256": "2af0eca3a6de0d99b78a3295ebfeb1f5cec43de61af2f8f4e5ecaf0f5f25b70a"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/analysis-contracts.md",
+          "destination_sha256": "e1ea2554c830750db8746217502a3b5da7d4dfd18f9974482d8bb317b3e515ce",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "references/attack-patterns.md",
+          "destination_sha256": "f55ce8e4bf7765465816c20e3a861228f9ac1f442a5e907ac64dff30977e7e35",
+          "source": "references/attack-patterns.md",
+          "source_sha256": "f55ce8e4bf7765465816c20e3a861228f9ac1f442a5e907ac64dff30977e7e35"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/authorization-relationship.schema.json",
+          "destination_sha256": "138b7e768f64600a7ed517f4273fbfbbed6d9ab97ba8f1c1ab08963eea0bf09b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/business-logic-invariants.schema.json",
+          "destination_sha256": "695357da664654dc694e7df158e9b71de7e786d81c5f7192044bf468021f2d74",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/context-scope.md",
+          "destination_sha256": "fc0e36fa46a0c39122fddec49f75817f043543976218268d7551e6cc5c2fd046",
+          "source": "references/context-scope.md",
+          "source_sha256": "dbc0da58a51c9f379f0cca45df47eca84d023497560c6d22f1ed8edc2360f697"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/cvss-policy.md",
+          "destination_sha256": "0410bd52dfb2349a1fb9174cb9558e214d0ec1bf7c8f7c92d40de9cb47f6443c",
+          "source": "references/cvss-policy.md",
+          "source_sha256": "dacb35ba98309a20a13a3d6de0eacbf1f2c8ec84eba1ebe827ed8262358cb298"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "references/data/sinks.json",
+          "destination_sha256": "580842d49d67b3dba1245dd6ec7537934290ac60cab77d17811a40d2c63887ed",
+          "source": "references/data/sinks.json",
+          "source_sha256": "580842d49d67b3dba1245dd6ec7537934290ac60cab77d17811a40d2c63887ed"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/enums.md",
+          "destination_sha256": "356805990a637d5e1a69453853f8746ccf28d7aa4a02d7b8004216bb1918f129",
+          "source": "references/enums.md",
+          "source_sha256": "a9fa104c91a72f4f0a156a40025dfc38e22bc42aba9620c3844dd9117116cc99"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/hook-setup.md",
+          "destination_sha256": "d9b38c305efe223117c46b8e7d1d4d7fbec3167228bcbbae77c6f946729f5d2f",
+          "source": "references/hook-setup.md",
+          "source_sha256": "f425b328a3f952613e96a989191e5a726c1246c08363875fa807eec219abebb1"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/multitenant-p0-doctrine.md",
+          "destination_sha256": "efcac17cd20560ae913b876404c10611f3a30b3a959600e532c39b5295536fe1",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/organization_context/README.md",
+          "destination_sha256": "2d5b8e2d3756a0d1b3fc198a490a8d2a707a3187ca3c5bce72d43e028e00e7ba",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/organization_context/_graph.json",
+          "destination_sha256": "bec4a37484233a29dec8e9a6b60d7a343967937324710dd79741123ed8a34fd9",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/organization_context/schema.json",
+          "destination_sha256": "67762319f3fc2707a0ae5810d07c7e37962be5cf53b3437398249b60c447552e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/pattern-tags.md",
+          "destination_sha256": "2605ba80b584876dc5919aef3f81ca87ea1501491452e35b5322d6644c4e6562",
+          "source": "references/pattern-tags.md",
+          "source_sha256": "eb4fdb398c809a0ebfa6a7ce53ef99b22e4f04d6dd152404b5b09eaae5ea1fab"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/pattern-validation-table.md",
+          "destination_sha256": "aa6113333b1debbb48c985d26f776db9b57cf3a42317ee92d510d87100366dd4",
+          "source": "references/pattern-validation-table.md",
+          "source_sha256": "45d90f3e38b643beba040cb37ed2cc6376e722e70dd6cce2126b670fd8833a84"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/report-contract.md",
+          "destination_sha256": "3ed7bb1e4e1ed4441c76be70e63083beeafd07b0ebaf4cbec31976b63cd8cfc5",
+          "source": "references/report-contract.md",
+          "source_sha256": "c4aeda38fb7605f72a43fda1bef84ec9fdebfaba700b7d3f6110f3df8f283d1f"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/state-schema.md",
+          "destination_sha256": "4a25a4e86472f1d1482636babb1b46ffe04c1c9fd35e2c1a87a275c09d17cd13",
+          "source": "references/state-schema.md",
+          "source_sha256": "ec5c219329df44a8ef071bd0a055104754f9faec5889a94aac72589ca7c6c819"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/CVSS-LICENSE",
+          "destination_sha256": "9d7fbe21f9676e34e0f58529398aad87bfb5416fcb48ef723a5fc9eabc1f405d",
+          "source": "scripts/CVSS-LICENSE",
+          "source_sha256": "9d7fbe21f9676e34e0f58529398aad87bfb5416fcb48ef723a5fc9eabc1f405d"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/agent-journal.py",
+          "destination_sha256": "26cc912c7d961a32c6561763569885fccf4fe4b54c10fa095343dcd292b9299e",
+          "source": "scripts/agent-journal.py",
+          "source_sha256": "58ab0d882e9698908a355ffa493fff5a4005e5438b4dc5b5b017c2eade991c46"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/build-context-graph.py",
+          "destination_sha256": "d44ce84e7a88f4fec1cc9e0b2dfbb82a4d6860c85e9438b3bfd3c058b8e410f2",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/build-callgraph.py",
+          "destination_sha256": "d20dfe1855dddcb6979751306ebd561b5198e2c008bd440b020c968ebdb8577e",
+          "source": "scripts/callgraph/build-callgraph.py",
+          "source_sha256": "d20dfe1855dddcb6979751306ebd561b5198e2c008bd440b020c968ebdb8577e"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/go-calls.scm",
+          "destination_sha256": "14a9afb394a63566c7904b8245c908d93647e8812989284af08084fa159e1c3f",
+          "source": "scripts/callgraph/queries/go-calls.scm",
+          "source_sha256": "14a9afb394a63566c7904b8245c908d93647e8812989284af08084fa159e1c3f"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/java-calls.scm",
+          "destination_sha256": "1d6f4d921c5b980dcec971fa6e33c754f096ed2b5ea9fca49f57408d5778f58f",
+          "source": "scripts/callgraph/queries/java-calls.scm",
+          "source_sha256": "1d6f4d921c5b980dcec971fa6e33c754f096ed2b5ea9fca49f57408d5778f58f"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/javascript-calls.scm",
+          "destination_sha256": "cb232b80eb32025a244755d492b43f8fffb9dd814e66e30ded33d47aa2a0ae2d",
+          "source": "scripts/callgraph/queries/javascript-calls.scm",
+          "source_sha256": "cb232b80eb32025a244755d492b43f8fffb9dd814e66e30ded33d47aa2a0ae2d"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/python-calls.scm",
+          "destination_sha256": "2ae488c7712ebe5d26f143e9d10a6ea5f3f6ed1b4fc81fddcb5bb8959218ebb8",
+          "source": "scripts/callgraph/queries/python-calls.scm",
+          "source_sha256": "2ae488c7712ebe5d26f143e9d10a6ea5f3f6ed1b4fc81fddcb5bb8959218ebb8"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/check-gate.sh",
+          "destination_sha256": "710fc7b94f65c2106daa78561afed3f859cfb9d330119e3d24e553ffebb118e8",
+          "source": "scripts/check-gate.sh",
+          "source_sha256": "4193df78b295fffa16e2525731ca2442e1cb895da6633b38acb741a5fc2432ca"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/complete-phase.sh",
+          "destination_sha256": "d895d7ace8497c8fc9209ad2bf33280b3830ad35da0ea7c06a96ccfd6fddc1af",
+          "source": "scripts/complete-phase.sh",
+          "source_sha256": "d895d7ace8497c8fc9209ad2bf33280b3830ad35da0ea7c06a96ccfd6fddc1af"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/cvss_v4.py",
+          "destination_sha256": "0c0139ae188ba2f18adedeeb89b6e5726554c5b500ade3e483f1647f8a2c51eb",
+          "source": "scripts/cvss_v4.py",
+          "source_sha256": "0c0139ae188ba2f18adedeeb89b6e5726554c5b500ade3e483f1647f8a2c51eb"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/dependency-inventory.py",
+          "destination_sha256": "bdd3b5bc8a3b7c3e476cd1bf2cba5287dbc4c8f55af94e863bc6c310247eca18",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/init-review.sh",
+          "destination_sha256": "095d1b3dab126874a5f3bf30efd9ca20c9cfaff0369758e73bc5ca7cb09e38ee",
+          "source": "scripts/init-review.sh",
+          "source_sha256": "c3a735fcba6cc4d75e25eeb653d01e2bb5050db7296789415c42404139cb3afc"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/normalize-multitenant-scope.py",
+          "destination_sha256": "4110da80dd31db7aa73eb27ae795e15984a253e08270be5482f02c8445129846",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/reconcile-topology.py",
+          "destination_sha256": "560d6cf096fab74a8b2e5551cc88d2caa79a68d5cf2262a2c5dca41df415b7e8",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build-executive.py",
+          "destination_sha256": "9e6b72570e6725345351b815610135a7f2b0c88d0b325bb235ed926e3cbe723a",
+          "source": "scripts/report/build-executive.py",
+          "source_sha256": "7766892ced7bf14ad9708557bb12533539915c36ca8e00ac07d5bceab2262ae0"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build-markdown.py",
+          "destination_sha256": "c1a846d3e95ddb60d9f966d142878a3e359e972dbf856cc680261f92120e196c",
+          "source": "scripts/report/build-markdown.py",
+          "source_sha256": "62e7a0a706c570f7e2672d97c5bcea26822561037ee65170240d88cedf7d8ff4"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/report/build-poc-execution.py",
+          "destination_sha256": "b6c46ef6864e9042ff25c32b9deb2592cc6a41ed7b15e918452ef21f763a246d",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build-sarif.py",
+          "destination_sha256": "922cf1dc7a6d49ad72d1042dcaf3359b0bd114f4ea2210f123014e59864e3dc9",
+          "source": "scripts/report/build-sarif.py",
+          "source_sha256": "0aaceef7fef624e07afca70827ba7892c505477c7cc6f76b4be93038cedcf012"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build.py",
+          "destination_sha256": "376e04a6a5d2bea54a6c485be30ef6d17a4897f09900692b36e65677c39f9e7b",
+          "source": "scripts/report/build.py",
+          "source_sha256": "a1dea5027a9004840cc649c6b6a50a7b3e417c0c17fe3bec21c349cc0ae166ed"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/report/poc-execution.css",
+          "destination_sha256": "76583e49574d491a04278b46bbe5232729cc0540a83e468e5d932d6eb28aa716",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/report/template.html",
+          "destination_sha256": "2f4435fe08bfb73fbd2b03b44ec36e8dd809648f2eb2c258f943ac847ed06dcc",
+          "source": "scripts/report/template.html",
+          "source_sha256": "2f4435fe08bfb73fbd2b03b44ec36e8dd809648f2eb2c258f943ac847ed06dcc"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/state-utils.sh",
+          "destination_sha256": "58c4d33625183ef0c57ea40cde5b6fa825f4d48696b0b90f441384ec6f6c64bf",
+          "source": "scripts/state-utils.sh",
+          "source_sha256": "58c4d33625183ef0c57ea40cde5b6fa825f4d48696b0b90f441384ec6f6c64bf"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/sync-organization-context.sh",
+          "destination_sha256": "8840cab55e5fa0ad517d4d6c96edbca15f1bb3e6a22c9c08ca7da441bc03bc4f",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/validate-findings.py",
+          "destination_sha256": "a0156a22a033b4b51e4033e40b87210120489b6dd62a180011f75082f93a3899",
+          "source": "scripts/validate-findings.py",
+          "source_sha256": "3930f51ac9155ee90c37e4dd897c0fedc976bbea0fb8b7377b75ed8066c86423"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/validate-phase.sh",
+          "destination_sha256": "c50fd38a620621e35f7d4b5a12f955fef14ee1b59406b79f6e106f0709c4410a",
+          "source": "scripts/validate-phase.sh",
+          "source_sha256": "1f9442b8474fa2308676e4a8d0038c783f59c9c887f613972616fc31eaf58a92"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/workspace-compat.py",
+          "destination_sha256": "01537f990babb99242b5699f4f2fa8d2213f2769d6b133a1dd1e3cda839b807e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "skills/nightfalcon/SKILL.md",
+          "destination_sha256": "47c172feb7cc4ce7a079652e7624cc0e12d90651791e91aefbeb4a16c75a87c6",
+          "source": "skills/nightfalcon/SKILL.md",
+          "source_sha256": "c09ae1756b7879f54a7f75253e2effc2e7b554904d5a71a10fee5b123179f37d"
+        }
+      ],
+      "included_source_file_count": 53,
+      "source_file_count": 1356
+    },
+    "codex": {
+      "destination_file_count": 101,
+      "destination_scope_exclusions": [
+        "docs/verification-report.md",
+        "verification-results.json"
+      ],
+      "excluded_source_file_count": 1373,
+      "excluded_source_sha256": "d63f29ffcc7893196fabf9301dfccea374d54d86c8550d7db5a2ed99a8922523",
+      "files": [
+        {
+          "classification": "ADAPTED",
+          "destination": ".agents/plugins/marketplace.json",
+          "destination_sha256": "4314231376bf372df6da1d8b4fd4abc393dde38fd08de339732c2e8a4cce33ad",
+          "source": ".agents/plugins/marketplace.json",
+          "source_sha256": "da66e21800cb97a99e7063cc2564a4504ec0bc7be2829175f1d6a0eda9a1396a"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "LICENSE",
+          "destination_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "NOTICE",
+          "destination_sha256": "d26ea33f397e1635dfcd51c4d4fe9918fd5b624ceaa0505a1e66f113e52a2e7a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "README.md",
+          "destination_sha256": "971ef02c13ffd938ad849de9198bbde4d71a34a035470b80f802609c82b9222e",
+          "source": "README.md",
+          "source_sha256": "96086c080ba2364909c8382b9330ac93d4e5c0093ef174434775fb87ef8712f2"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "config/codex-config.toml",
+          "destination_sha256": "958a82825e2581ee84e06d14809de9bb59d8a554b4cba0cd1ca57be16b6bfdb2",
+          "source": "config/codex-config.toml",
+          "source_sha256": "958a82825e2581ee84e06d14809de9bb59d8a554b4cba0cd1ca57be16b6bfdb2"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "migration-map.json",
+          "destination_sha256": "17422a3e10b33d48bb74e73e8522f31ffe5c5ef6e4e7609b4b294754982ebbf2",
+          "source": "migration-map.json",
+          "source_sha256": "89ad4ffcb6be0e077a2d5de956063482ce2e71d39a5c67e109e6ffcb843f51c6"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/.codex-plugin/plugin.json",
+          "destination_sha256": "030735f745c178f39ef31399a21f8c59a22131a3794418916b91fbce9029fb14",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/AGENTS.md",
+          "destination_sha256": "37b6692d8568be3d8ca65005b7a13c4f4fe7aec5b82a1d7757230ba89a582c27",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/LICENSE",
+          "destination_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/NOTICE",
+          "destination_sha256": "380f5387d69a805474494a8e4b8218daebe7f188472d8af276edbe01f5e7296f",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/README.md",
+          "destination_sha256": "9fa061f81a64fb30facc9403b63048dd2b461eef7d439df80e969b3600aa0d6a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/hooks/.gitkeep",
+          "destination_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/hooks/hooks.json",
+          "destination_sha256": "603a2a0f6e88e65d456d73803a7b3b131ccf211028bfeadf9d63725edf549597",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/hooks/nightfalcon_hook.py",
+          "destination_sha256": "8c628afea8f3e7f0ee59d3219466d67f9fb6a4c978744d18095b4cb6366ad0a1",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-0.md",
+          "destination_sha256": "677b117b797424da7a3ee43495eda68849a92dc0ff0308d4f1089f09315aad5a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-1.md",
+          "destination_sha256": "a87b76cd65e540ad66543aeba31356528d4f57bf65cf9d70755339b03ea60e89",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-2.md",
+          "destination_sha256": "4f31ff6af4e8a70c032fcf4263a10fe3a133c86addb2453139f45b5d7382c205",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-3.md",
+          "destination_sha256": "fa3b6daa235851c301fa4b66cc6672c548ab17b2f46218f64e2eb3f2de15dd4a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-4.md",
+          "destination_sha256": "af9e2fe3d86357f86a4da23b56a0ae35092ae64717f4f90de3600a5b89a250f8",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-5.md",
+          "destination_sha256": "b035769db83684d88fddae1f5accfedae7695b4a9c61e350a2f4f29d32aaa8ba",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-6.md",
+          "destination_sha256": "894b78eea0999fecfaed5cd25c6fff85b886f248ca178f0a44e15f991ae0b7c9",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-7.md",
+          "destination_sha256": "9a4c866bf794d9659877b17d0b1cd3f0a3ec5e134e477766bee8ad30a5da72de",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-8.md",
+          "destination_sha256": "65e8650d03fe31e26fd81aa8128ac3311ade043b3c25d301ecf5ddcbdfcb5a0b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-da.md",
+          "destination_sha256": "ce4411c5495a944a4b7a87f58404c159ddd68b7024dbb00464f31c63f79b5f42",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/phase-poc-reviewer.md",
+          "destination_sha256": "1bc94c35cb5e0620800d2113edce1de1c72871accf99cc83ca058fe00978c65d",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/phases/triage-ingest.md",
+          "destination_sha256": "ebd0c4f0eb52d2c354b8a941ab16905afa7ecc90bf9980dfb3fcc78e2010a468",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/OWASP/ATTRIBUTION.md",
+          "destination_sha256": "8e2292762d8aa45bd155b7c0d93cb4fe4bacb591fba9dcdbc21542cd6c766d28",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/OWASP/OWASP Framework Index.md",
+          "destination_sha256": "101a72264db3026508a1e74d9c8074e1fc972142f2b3e3c6c6635bf7e25efeab",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/OWASP/OWASP_ASVS_5.0.0.md",
+          "destination_sha256": "bdba67441c1778c4a7f857eaf2bf25d99076e4b29466b4afc8349a933c7d0696",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/OWASP/OWASP_Cloud_Agentic_and_Identity.md",
+          "destination_sha256": "6a0c69b1a21b08661fa1196e896363db285925056cbe918cd58223ade5b5a14c",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/OWASP/_graph.json",
+          "destination_sha256": "ffb02093bc06d5e4c693243c29261f63fe650c968cae3ded4be01750635783e6",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/OWASP/owasp-fingerprints.yaml",
+          "destination_sha256": "6961473dd270bc9210f6d587096d9d13720b9f88cc0eba210489f706b32a210e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/analysis-contracts.md",
+          "destination_sha256": "e1ea2554c830750db8746217502a3b5da7d4dfd18f9974482d8bb317b3e515ce",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/attack-patterns.md",
+          "destination_sha256": "f55ce8e4bf7765465816c20e3a861228f9ac1f442a5e907ac64dff30977e7e35",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/authorization-relationship.schema.json",
+          "destination_sha256": "138b7e768f64600a7ed517f4273fbfbbed6d9ab97ba8f1c1ab08963eea0bf09b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/business-logic-invariants.schema.json",
+          "destination_sha256": "695357da664654dc694e7df158e9b71de7e786d81c5f7192044bf468021f2d74",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/context-scope.md",
+          "destination_sha256": "fc7eabe21a7ef684fac6431d5a3509c6006bebb72c1ce1b0e29ff0d1977efe58",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/cvss-policy.md",
+          "destination_sha256": "0410bd52dfb2349a1fb9174cb9558e214d0ec1bf7c8f7c92d40de9cb47f6443c",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/data/sinks.json",
+          "destination_sha256": "580842d49d67b3dba1245dd6ec7537934290ac60cab77d17811a40d2c63887ed",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/enums.md",
+          "destination_sha256": "3d6c1ccfcac6dce1e6e053dd38428f296c9db04f338211677aa2f22c6e25ef45",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/hook-setup.md",
+          "destination_sha256": "ae0a1364a1cf98ca541e58874d22fd1517183c91be3be6e3189543ecd10a5db0",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/multitenant-p0-doctrine.md",
+          "destination_sha256": "efcac17cd20560ae913b876404c10611f3a30b3a959600e532c39b5295536fe1",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/organization_context/README.md",
+          "destination_sha256": "2d5b8e2d3756a0d1b3fc198a490a8d2a707a3187ca3c5bce72d43e028e00e7ba",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/organization_context/_graph.json",
+          "destination_sha256": "bec4a37484233a29dec8e9a6b60d7a343967937324710dd79741123ed8a34fd9",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/organization_context/schema.json",
+          "destination_sha256": "67762319f3fc2707a0ae5810d07c7e37962be5cf53b3437398249b60c447552e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/pattern-tags.md",
+          "destination_sha256": "2605ba80b584876dc5919aef3f81ca87ea1501491452e35b5322d6644c4e6562",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/pattern-validation-table.md",
+          "destination_sha256": "aa6113333b1debbb48c985d26f776db9b57cf3a42317ee92d510d87100366dd4",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/report-contract.md",
+          "destination_sha256": "3ed7bb1e4e1ed4441c76be70e63083beeafd07b0ebaf4cbec31976b63cd8cfc5",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/references/state-schema.md",
+          "destination_sha256": "a73b89dab91fca8c39c549c4861ead67dd6a9a8c9196693aae459e98813ff86b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/.gitkeep",
+          "destination_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/CVSS-LICENSE",
+          "destination_sha256": "9d7fbe21f9676e34e0f58529398aad87bfb5416fcb48ef723a5fc9eabc1f405d",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/agent-journal.py",
+          "destination_sha256": "26cc912c7d961a32c6561763569885fccf4fe4b54c10fa095343dcd292b9299e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/build-context-graph.py",
+          "destination_sha256": "d44ce84e7a88f4fec1cc9e0b2dfbb82a4d6860c85e9438b3bfd3c058b8e410f2",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/callgraph/build-callgraph.py",
+          "destination_sha256": "d20dfe1855dddcb6979751306ebd561b5198e2c008bd440b020c968ebdb8577e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/callgraph/queries/go-calls.scm",
+          "destination_sha256": "14a9afb394a63566c7904b8245c908d93647e8812989284af08084fa159e1c3f",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/callgraph/queries/java-calls.scm",
+          "destination_sha256": "1d6f4d921c5b980dcec971fa6e33c754f096ed2b5ea9fca49f57408d5778f58f",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/callgraph/queries/javascript-calls.scm",
+          "destination_sha256": "cb232b80eb32025a244755d492b43f8fffb9dd814e66e30ded33d47aa2a0ae2d",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/callgraph/queries/python-calls.scm",
+          "destination_sha256": "2ae488c7712ebe5d26f143e9d10a6ea5f3f6ed1b4fc81fddcb5bb8959218ebb8",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/check-gate.sh",
+          "destination_sha256": "710fc7b94f65c2106daa78561afed3f859cfb9d330119e3d24e553ffebb118e8",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/complete-phase.sh",
+          "destination_sha256": "d895d7ace8497c8fc9209ad2bf33280b3830ad35da0ea7c06a96ccfd6fddc1af",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/cvss_v4.py",
+          "destination_sha256": "0c0139ae188ba2f18adedeeb89b6e5726554c5b500ade3e483f1647f8a2c51eb",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/dependency-inventory.py",
+          "destination_sha256": "bdd3b5bc8a3b7c3e476cd1bf2cba5287dbc4c8f55af94e863bc6c310247eca18",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/init-review.sh",
+          "destination_sha256": "2e3af321fa15517d7443885c12f1b0a9b03792219fde22743a1b6afbdbd0204f",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/normalize-multitenant-scope.py",
+          "destination_sha256": "4110da80dd31db7aa73eb27ae795e15984a253e08270be5482f02c8445129846",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/preflight.py",
+          "destination_sha256": "0470cb33154d00b17eea5992275e0cfa4d369a8f62a34ec4dc40fce98b378757",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/reconcile-topology.py",
+          "destination_sha256": "560d6cf096fab74a8b2e5551cc88d2caa79a68d5cf2262a2c5dca41df415b7e8",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/report/build-executive.py",
+          "destination_sha256": "9e6b72570e6725345351b815610135a7f2b0c88d0b325bb235ed926e3cbe723a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/report/build-markdown.py",
+          "destination_sha256": "c1a846d3e95ddb60d9f966d142878a3e359e972dbf856cc680261f92120e196c",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/report/build-sarif.py",
+          "destination_sha256": "922cf1dc7a6d49ad72d1042dcaf3359b0bd114f4ea2210f123014e59864e3dc9",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/report/build.py",
+          "destination_sha256": "376e04a6a5d2bea54a6c485be30ef6d17a4897f09900692b36e65677c39f9e7b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/report/template.html",
+          "destination_sha256": "2f4435fe08bfb73fbd2b03b44ec36e8dd809648f2eb2c258f943ac847ed06dcc",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/state-utils.sh",
+          "destination_sha256": "58c4d33625183ef0c57ea40cde5b6fa825f4d48696b0b90f441384ec6f6c64bf",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/sync-organization-context.sh",
+          "destination_sha256": "8840cab55e5fa0ad517d4d6c96edbca15f1bb3e6a22c9c08ca7da441bc03bc4f",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/validate-findings.py",
+          "destination_sha256": "a0156a22a033b4b51e4033e40b87210120489b6dd62a180011f75082f93a3899",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/validate-phase.sh",
+          "destination_sha256": "c50fd38a620621e35f7d4b5a12f955fef14ee1b59406b79f6e106f0709c4410a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/scripts/workspace-compat.py",
+          "destination_sha256": "01537f990babb99242b5699f4f2fa8d2213f2769d6b133a1dd1e3cda839b807e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/skills/.gitkeep",
+          "destination_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/skills/nightfalcon/SKILL.md",
+          "destination_sha256": "5dedbc608f2685e686d90cbf94a0ff974d18e50a6e0c4e85aa800cfdeb096caf",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/fixtures/executive-summary.json",
+          "destination_sha256": "8a13168b9b899eec3b090606f5d92e7283d8b2ffa6af11bae9a61ad46c0bb7db",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/test_gates.py",
+          "destination_sha256": "50d07d3b588ec8df9b913a47235efa2eaad8e9337a860427db38a8eec5f0f61e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/test_hook.py",
+          "destination_sha256": "dcf2b77fedd55b919005b10218e0ad356353b6541d60f32b9036dfb329bc784b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/test_preflight.py",
+          "destination_sha256": "e6fa67ef4d95da2482e92033f2f7c96a552057ecfe4a6064f63fc0193d99e3ec",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/test_prompts.py",
+          "destination_sha256": "d1540277385cb14eb4dae860c13532b9c00d7ca7bbcf383bca5fcaba6c4c8120",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/test_report.py",
+          "destination_sha256": "c35c826e5bc5018c4dd1ab84350cd1f4f328a3445ab0deafcfbc2acbfdb233d7",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/test_runtime_scripts.py",
+          "destination_sha256": "ba506e7f2ad7f66fff26b555f9f739445372e33d24fee1766e415025d17b09d5",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "plugins/nightfalcon/tests/test_sarif.py",
+          "destination_sha256": "481e440f902fc5290771e481591e16307dbe21d27baade3613915ec9d75b9a5b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/build-port-inventory.py",
+          "destination_sha256": "606eef1bccf2308b93c21be6ce8a56125a8cb7215d1e51220efc26b98413ac69",
+          "source": "scripts/build-port-inventory.py",
+          "source_sha256": "0a82ff75c9e0535f0f24f41221e348c56b6b1eea7a7e216ae5d77e10c562a63d"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/copy-runtime-corpus.sh",
+          "destination_sha256": "44048128ff5f6dc5d7d495fcd6d53e13d99c5f0e6a6892a011672dfbfdf8987c",
+          "source": "scripts/copy-runtime-corpus.sh",
+          "source_sha256": "828887377e5878f5fc348938407d455c8711dadf9dfc757c5194015011aea434"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/distribution_manifest.py",
+          "destination_sha256": "137d7a5851b734df84d9f06befcd2fada15f2428a0a99138cebb2e83f3a05a86",
+          "source": "scripts/distribution_manifest.py",
+          "source_sha256": "137d7a5851b734df84d9f06befcd2fada15f2428a0a99138cebb2e83f3a05a86"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/reinstall-local-plugin.py",
+          "destination_sha256": "dd9069c056600bb8ae0b91c32dc3fccd017c197e2374f9dd9454d4c3bfbfacb6",
+          "source": "scripts/reinstall-local-plugin.py",
+          "source_sha256": "dd9069c056600bb8ae0b91c32dc3fccd017c197e2374f9dd9454d4c3bfbfacb6"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/run-verification.py",
+          "destination_sha256": "cd6bbde44c6487fc545d0c615739a87e6d93508c6ef3c6741d3d930ab621a004",
+          "source": "scripts/run-verification.py",
+          "source_sha256": "dcda00a2c14094d7a8f5cdd70188ccf506326c20c58aaf0ca0d85d97642beee4"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/validators/quick_validate.py",
+          "destination_sha256": "90afde47587075671a862429d6fa451cce36363faceb57c5231f489b8f8a9532",
+          "source": "scripts/validators/quick_validate.py",
+          "source_sha256": "90afde47587075671a862429d6fa451cce36363faceb57c5231f489b8f8a9532"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/validators/validate_plugin.py",
+          "destination_sha256": "da99f77976b06baeceb869dfa2a23f6901b44e36b1a59187be8dc648367cb197",
+          "source": "scripts/validators/validate_plugin.py",
+          "source_sha256": "da99f77976b06baeceb869dfa2a23f6901b44e36b1a59187be8dc648367cb197"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/verify-port.sh",
+          "destination_sha256": "f4a9b83f8eb7108ee096b226987bcba60198408d6da6d792c7a088088cb395bc",
+          "source": "scripts/verify-port.sh",
+          "source_sha256": "2646f82cef507f3e290126d0c0ea45038629213aec752098e2dcaff26ff1ccc3"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/write-verification-report.py",
+          "destination_sha256": "72f7b229b49540288ee8c6ef9ea15c868a497c7cbe27fa4f866e345a5688a77a",
+          "source": "scripts/write-verification-report.py",
+          "source_sha256": "73b63a809c808181ba4dcab9c71cb45ac5decc8b6a518ed92b8bc5804952f7fe"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "tests/test_distribution.py",
+          "destination_sha256": "a47f8712a5104e68e0c4d7e47625377b5e7f729943c5737b219313ba8ba9bc8c",
+          "source": "tests/test_distribution.py",
+          "source_sha256": "3af7472b92ddf51315a356b25810ba79d63e9620394d168040ba338309c26210"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "tests/test_documentation.py",
+          "destination_sha256": "3f580f88ea14e964fba293d4221bee2effd45778ffedccf3e572588c4d3be062",
+          "source": "tests/test_documentation.py",
+          "source_sha256": "ea236889ce06b3fc0140145bf1e5a116b8a8da80af2a39916acc110a240f8599"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "tests/test_inventory.py",
+          "destination_sha256": "95145ba56336592136a4b9e34abd6c33bbf03d51b41c93acccf0c2187640ea62",
+          "source": "tests/test_inventory.py",
+          "source_sha256": "735b2448c10b3821df8ca578bf3ce8dd961a731a9771d61511acc2a5791605a4"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "tests/test_reinstall_local_plugin.py",
+          "destination_sha256": "967ea4aeb371a5ef287a6ed740284f90aefdf5f832883a739514044dce568e4c",
+          "source": "tests/test_reinstall_local_plugin.py",
+          "source_sha256": "a8f27862cad5b4592f3829b54a3ef9a55695665797ac0a08ea5c4bfef1f322cb"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "tests/test_verification.py",
+          "destination_sha256": "36317909083db9c9f2d2c62936de9fa88a0b0ce11c8908390fff73a20bbae18f",
+          "source": "tests/test_verification.py",
+          "source_sha256": "b8eb3c0d021b0c0add6e144a677618497f648da626ee3b9766ec2cde26f8dc50"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "verification-scope.json",
+          "destination_sha256": "6fd62ccf0e32ebf4fb1077046766c0be75c2749073a5e05ce6918d1ea0c66b30",
+          "source": "verification-scope.json",
+          "source_sha256": "cc7eda9ae4f57a090ec2710513b331d6948fe10ac4269ffdc8a797c0a9b8fe21"
+        }
+      ],
+      "included_source_file_count": 19,
+      "post_migration_exclusions": [
+        {
+          "source": ".github/workflows/validate.yml",
+          "source_sha256": "4a9d5e9ebe9f5b70574acd7248504710f4d339407d731e73dc2a57da3fe39e29"
+        }
+      ],
+      "source_file_count": 1393
+    },
+    "cursor": {
+      "destination_file_count": 76,
+      "destination_scope_exclusions": [],
+      "excluded_source_file_count": 1301,
+      "excluded_source_sha256": "e215fccafee85bdff3818b6787659bb1f238b1496e8b7b080d3db5d46892f361",
+      "files": [
+        {
+          "classification": "ADAPTED",
+          "destination": ".cursor/commands/nightfalcon.md",
+          "destination_sha256": "160ab167d5a669b825160805ed6cf61b8e3e530bd176e1f428af68f7fa5a0098",
+          "source": ".cursor/commands/nightfalcon.md",
+          "source_sha256": "d5ede679f1cede6c3f3198650b967276a3e226aad08412a5a7c9f581fcbe578e"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": ".cursor/hooks.json",
+          "destination_sha256": "5e341c8a0dccfa92fbd96131374355bfadb10abfba5cb06d5e0a125b8bde4586",
+          "source": ".cursor/hooks.json",
+          "source_sha256": "5e341c8a0dccfa92fbd96131374355bfadb10abfba5cb06d5e0a125b8bde4586"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": ".cursor/hooks/edit-log.sh",
+          "destination_sha256": "cbff08942d20ca358d31351e8ad4dccc8db3ea0bc7cdf0bb90dca4bac28a43b8",
+          "source": ".cursor/hooks/edit-log.sh",
+          "source_sha256": "f1615d63298b0ebda67d2c9ece16c37fbc689c1cfb6d2489832c7150f7fadd4a"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": ".cursor/hooks/gate-guard.sh",
+          "destination_sha256": "26134c6ba84e6029e8301132aa2d1ee4873cbc0a1b45990ac04e3e1e2e6caf3c",
+          "source": ".cursor/hooks/gate-guard.sh",
+          "source_sha256": "6ee1f6f5eb9c608b8ad5e5bcfd46efb2d4ca166182aeaf1f98872fc96ca5a4bb"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": ".cursor/hooks/stop-enforce.sh",
+          "destination_sha256": "841e3d4615dd15827e843fffcae74ce5a59210b4a85cde2a4a97d64cd95679e1",
+          "source": ".cursor/hooks/stop-enforce.sh",
+          "source_sha256": "018c2058b065c3004a407b1d44f1b177c21f6f8bdb38abe8055a020ffa61ecb4"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": ".cursor/hooks/workspace.py",
+          "destination_sha256": "204669503d73e23197301517c5ca96b322940716586c2949d0f5fc78cee4c0a9",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": ".cursor/rules/nightfalcon.mdc",
+          "destination_sha256": "ab50608a4e762bfde37d96ce829abb45709e70bf71a61732de576311e8ce050c",
+          "source": ".cursor/rules/nightfalcon.mdc",
+          "source_sha256": "38f0d77a14d806b6fa599c8cdf62e1d0d5934c467896302bf19475c02af4901c"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": ".cursor/skills/nightfalcon/SKILL.md",
+          "destination_sha256": "af3988814a140b799e781f633a6394efcf2d50b6f5c21494710b4a88bb24a8f0",
+          "source": ".cursor/skills/nightfalcon/SKILL.md",
+          "source_sha256": "15621a0c63f9b82e6c5764e0df5b9aae72f4c06deff1e326b35ad774e1e74454"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": ".gitignore",
+          "destination_sha256": "fcddf21ca0f08b57e79b659bee382c7170c9a03ec5d2853cdc67ecade223d565",
+          "source": ".gitignore",
+          "source_sha256": "fcddf21ca0f08b57e79b659bee382c7170c9a03ec5d2853cdc67ecade223d565"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "AGENTS.md",
+          "destination_sha256": "34e3a43014e8293d761d6dc14853edaadb05676762b60f7d7de875f4cbcd6aea",
+          "source": "AGENTS.md",
+          "source_sha256": "43db061c067fdaa26994207d1c41f29285f64d900c9e0194480e00eb3261b6d2"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "LICENSE",
+          "destination_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "NOTICE",
+          "destination_sha256": "d26ea33f397e1635dfcd51c4d4fe9918fd5b624ceaa0505a1e66f113e52a2e7a",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "README.md",
+          "destination_sha256": "61da6beb67437697c9541bf58844e31f1e31fe2471326e30a31a51a83924f3a4",
+          "source": "README.md",
+          "source_sha256": "27c0888f1fc5608c920c73bfd8835d8e705bbf7dacdc3cd6122efa59ace61377"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "VERSION",
+          "destination_sha256": "2985be8b28d3ade858e8d8fb4bc22f565b1bf6020dff982dce141f7721b9999c",
+          "source": "VERSION",
+          "source_sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-0.md",
+          "destination_sha256": "07972b5948de8db47bbe9a972258d1b38fca185276bc459f515a93955c93f9f9",
+          "source": "phases/phase-0.md",
+          "source_sha256": "a9193901440794e7ab2cd3eee0e0a1bcb1fbfdf14626dda8778b01bab57c7643"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-1.md",
+          "destination_sha256": "b052c892aa18950f7e84570b5f48fabc3ff95c4f9e21ab85e33a407cbbb00d42",
+          "source": "phases/phase-1.md",
+          "source_sha256": "d8a1044ed503da09ce277ffaf4076c77f107c9bae1eb0ffefac81e009f436d93"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-2.md",
+          "destination_sha256": "810e6b8640b448c6a6640c1645c115d86ad67586a4311ab8b78b0ddb3d1495cd",
+          "source": "phases/phase-2.md",
+          "source_sha256": "4a2ef77afcf4781395ef0e8675472b7ee192ba79973bfddf24871ddd009fe721"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-3.md",
+          "destination_sha256": "d147d297251fa6ab2dc6e7e74b79a2b97e9a24d95607934228509050e2929d20",
+          "source": "phases/phase-3.md",
+          "source_sha256": "959710344692c79ee06d2a84bb1cd34df152ebbf96109d01e80593e8932b9658"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-4.md",
+          "destination_sha256": "c53278c2c7a69262ecce49135dbfaccc0eadf4fda893ad9ec7d75cd4cc56bd28",
+          "source": "phases/phase-4.md",
+          "source_sha256": "eaf478befb800a2d13e2d2a13d302b02cadf9c63decb930c361a8cbccbaba5aa"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-5.md",
+          "destination_sha256": "4805b1e1840e2d5b6f1e2f51b6da29b0baaa34dd689e8700bf05e3f154f688dd",
+          "source": "phases/phase-5.md",
+          "source_sha256": "523e757f6a794b834d0377346c703e404f43f91e335f509e6676b7049855bd8b"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-6.md",
+          "destination_sha256": "def255b3fe5ca76fd6aa69d6d4a8f25b53b31aaf86c606632ff2ea8c1a509878",
+          "source": "phases/phase-6.md",
+          "source_sha256": "7186f825c6f9c4e87e139d14730d0bf08f91db8651850a23b95c48afd8d1c7eb"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-7.md",
+          "destination_sha256": "7a24aba6c8d063bc03b9711c9a2dc410472aabbaaafe88d29aac45549e13a997",
+          "source": "phases/phase-7.md",
+          "source_sha256": "add77ca4fe8a1e312cb9e0e676df57f82cacf5d95334ef2a0eb0b1c4519c9581"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-8.md",
+          "destination_sha256": "65e8650d03fe31e26fd81aa8128ac3311ade043b3c25d301ecf5ddcbdfcb5a0b",
+          "source": "phases/phase-8.md",
+          "source_sha256": "c52905c8a467afca8cda7ec07c472957b99262f42bbb29c0ad445ebac5d450ab"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "phases/phase-da.md",
+          "destination_sha256": "f2f87e62321a93b14edc862be3bad36018f986f72cb4e67955ab60f1ee7a841f",
+          "source": "phases/phase-da.md",
+          "source_sha256": "f2f87e62321a93b14edc862be3bad36018f986f72cb4e67955ab60f1ee7a841f"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/phase-poc-reviewer.md",
+          "destination_sha256": "27e79fa07c7b270369cf78e9fca6a67106841c9a05a186409ec43afa6493d98a",
+          "source": "phases/phase-poc-reviewer.md",
+          "source_sha256": "7b2d0be7e90316000eb47c75003efe633639352d435a83da6f5126e029b7b38a"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "phases/triage-ingest.md",
+          "destination_sha256": "bc41e00df1fb4cf936b95930ef3688322875504a4b62f18063b5a36dd59460c3",
+          "source": "phases/triage-ingest.md",
+          "source_sha256": "21389d8c12b1cc5339c57fb53795764d164ff9c7a80526fdddcb214dd199d1c6"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/OWASP/ATTRIBUTION.md",
+          "destination_sha256": "8e2292762d8aa45bd155b7c0d93cb4fe4bacb591fba9dcdbc21542cd6c766d28",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/OWASP/OWASP Framework Index.md",
+          "destination_sha256": "101a72264db3026508a1e74d9c8074e1fc972142f2b3e3c6c6635bf7e25efeab",
+          "source": "references/OWASP/OWASP Framework Index.md",
+          "source_sha256": "aa5ac370762314106989dab4c6f48fb3579b08dcb321ec7017bf63d924aa86f4"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/OWASP/OWASP_ASVS_5.0.0.md",
+          "destination_sha256": "bdba67441c1778c4a7f857eaf2bf25d99076e4b29466b4afc8349a933c7d0696",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/OWASP/OWASP_Cloud_Agentic_and_Identity.md",
+          "destination_sha256": "6a0c69b1a21b08661fa1196e896363db285925056cbe918cd58223ade5b5a14c",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/OWASP/_graph.json",
+          "destination_sha256": "ffb02093bc06d5e4c693243c29261f63fe650c968cae3ded4be01750635783e6",
+          "source": "references/OWASP/_graph.json",
+          "source_sha256": "64628965eed1f3f4404f486d4cf5bef42043932a52a13e974ecadd59b08b4282"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/OWASP/owasp-fingerprints.yaml",
+          "destination_sha256": "6961473dd270bc9210f6d587096d9d13720b9f88cc0eba210489f706b32a210e",
+          "source": "references/OWASP/owasp-fingerprints.yaml",
+          "source_sha256": "2af0eca3a6de0d99b78a3295ebfeb1f5cec43de61af2f8f4e5ecaf0f5f25b70a"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/analysis-contracts.md",
+          "destination_sha256": "e1ea2554c830750db8746217502a3b5da7d4dfd18f9974482d8bb317b3e515ce",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "references/attack-patterns.md",
+          "destination_sha256": "f55ce8e4bf7765465816c20e3a861228f9ac1f442a5e907ac64dff30977e7e35",
+          "source": "references/attack-patterns.md",
+          "source_sha256": "f55ce8e4bf7765465816c20e3a861228f9ac1f442a5e907ac64dff30977e7e35"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/authorization-relationship.schema.json",
+          "destination_sha256": "138b7e768f64600a7ed517f4273fbfbbed6d9ab97ba8f1c1ab08963eea0bf09b",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/business-logic-invariants.schema.json",
+          "destination_sha256": "695357da664654dc694e7df158e9b71de7e786d81c5f7192044bf468021f2d74",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/context-scope.md",
+          "destination_sha256": "f48ea2aac26e24cbfbf9beec50cf3b63a0f1418ee52263242c53002e7dbe5b80",
+          "source": "references/context-scope.md",
+          "source_sha256": "c33c0d23a36f27d7883c7cfaa2399590cf65ffaaa8110cddb5684dc3421f9628"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/cvss-policy.md",
+          "destination_sha256": "0410bd52dfb2349a1fb9174cb9558e214d0ec1bf7c8f7c92d40de9cb47f6443c",
+          "source": "references/cvss-policy.md",
+          "source_sha256": "dacb35ba98309a20a13a3d6de0eacbf1f2c8ec84eba1ebe827ed8262358cb298"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "references/data/sinks.json",
+          "destination_sha256": "580842d49d67b3dba1245dd6ec7537934290ac60cab77d17811a40d2c63887ed",
+          "source": "references/data/sinks.json",
+          "source_sha256": "580842d49d67b3dba1245dd6ec7537934290ac60cab77d17811a40d2c63887ed"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/enums.md",
+          "destination_sha256": "988b91fae6629315ba21c17a47db77b7b94b51a1a3b038fb25b073c251aa06ca",
+          "source": "references/enums.md",
+          "source_sha256": "4c7b9e1bf399bdf548944e84359ed98a84c460b24459033d7e7d7e66a84672d6"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/hook-setup.md",
+          "destination_sha256": "6bdbef99dcc10df6ec54097406b708e0ef486c0d565741740a39c92d771c307c",
+          "source": "references/hook-setup.md",
+          "source_sha256": "8df557a42b5d7a473e3c2f14d87a1477602bfd58576f509730039123d4ff9d35"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/multitenant-p0-doctrine.md",
+          "destination_sha256": "efcac17cd20560ae913b876404c10611f3a30b3a959600e532c39b5295536fe1",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/organization_context/README.md",
+          "destination_sha256": "2d5b8e2d3756a0d1b3fc198a490a8d2a707a3187ca3c5bce72d43e028e00e7ba",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/organization_context/_graph.json",
+          "destination_sha256": "bec4a37484233a29dec8e9a6b60d7a343967937324710dd79741123ed8a34fd9",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "references/organization_context/schema.json",
+          "destination_sha256": "67762319f3fc2707a0ae5810d07c7e37962be5cf53b3437398249b60c447552e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/pattern-tags.md",
+          "destination_sha256": "2605ba80b584876dc5919aef3f81ca87ea1501491452e35b5322d6644c4e6562",
+          "source": "references/pattern-tags.md",
+          "source_sha256": "eb4fdb398c809a0ebfa6a7ce53ef99b22e4f04d6dd152404b5b09eaae5ea1fab"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/pattern-validation-table.md",
+          "destination_sha256": "aa6113333b1debbb48c985d26f776db9b57cf3a42317ee92d510d87100366dd4",
+          "source": "references/pattern-validation-table.md",
+          "source_sha256": "1d9ffea63cced8d2ffd914f82cd52dda93bd66ae6c4aee9114f2cc56f1a9ea92"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "references/report-contract.md",
+          "destination_sha256": "3ed7bb1e4e1ed4441c76be70e63083beeafd07b0ebaf4cbec31976b63cd8cfc5",
+          "source": "references/report-contract.md",
+          "source_sha256": "c4aeda38fb7605f72a43fda1bef84ec9fdebfaba700b7d3f6110f3df8f283d1f"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "references/state-schema.md",
+          "destination_sha256": "38b68fc8eef43d9eea36d11f5b7fc6cab06b1b0c8a3ec28c9b0202d16f982210",
+          "source": "references/state-schema.md",
+          "source_sha256": "38b68fc8eef43d9eea36d11f5b7fc6cab06b1b0c8a3ec28c9b0202d16f982210"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/CVSS-LICENSE",
+          "destination_sha256": "9d7fbe21f9676e34e0f58529398aad87bfb5416fcb48ef723a5fc9eabc1f405d",
+          "source": "scripts/CVSS-LICENSE",
+          "source_sha256": "9d7fbe21f9676e34e0f58529398aad87bfb5416fcb48ef723a5fc9eabc1f405d"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/agent-journal.py",
+          "destination_sha256": "26cc912c7d961a32c6561763569885fccf4fe4b54c10fa095343dcd292b9299e",
+          "source": "scripts/agent-journal.py",
+          "source_sha256": "58ab0d882e9698908a355ffa493fff5a4005e5438b4dc5b5b017c2eade991c46"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/build-context-graph.py",
+          "destination_sha256": "d44ce84e7a88f4fec1cc9e0b2dfbb82a4d6860c85e9438b3bfd3c058b8e410f2",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/build-callgraph.py",
+          "destination_sha256": "d20dfe1855dddcb6979751306ebd561b5198e2c008bd440b020c968ebdb8577e",
+          "source": "scripts/callgraph/build-callgraph.py",
+          "source_sha256": "d20dfe1855dddcb6979751306ebd561b5198e2c008bd440b020c968ebdb8577e"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/go-calls.scm",
+          "destination_sha256": "14a9afb394a63566c7904b8245c908d93647e8812989284af08084fa159e1c3f",
+          "source": "scripts/callgraph/queries/go-calls.scm",
+          "source_sha256": "14a9afb394a63566c7904b8245c908d93647e8812989284af08084fa159e1c3f"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/java-calls.scm",
+          "destination_sha256": "1d6f4d921c5b980dcec971fa6e33c754f096ed2b5ea9fca49f57408d5778f58f",
+          "source": "scripts/callgraph/queries/java-calls.scm",
+          "source_sha256": "1d6f4d921c5b980dcec971fa6e33c754f096ed2b5ea9fca49f57408d5778f58f"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/javascript-calls.scm",
+          "destination_sha256": "cb232b80eb32025a244755d492b43f8fffb9dd814e66e30ded33d47aa2a0ae2d",
+          "source": "scripts/callgraph/queries/javascript-calls.scm",
+          "source_sha256": "cb232b80eb32025a244755d492b43f8fffb9dd814e66e30ded33d47aa2a0ae2d"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/callgraph/queries/python-calls.scm",
+          "destination_sha256": "2ae488c7712ebe5d26f143e9d10a6ea5f3f6ed1b4fc81fddcb5bb8959218ebb8",
+          "source": "scripts/callgraph/queries/python-calls.scm",
+          "source_sha256": "2ae488c7712ebe5d26f143e9d10a6ea5f3f6ed1b4fc81fddcb5bb8959218ebb8"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/check-gate.sh",
+          "destination_sha256": "710fc7b94f65c2106daa78561afed3f859cfb9d330119e3d24e553ffebb118e8",
+          "source": "scripts/check-gate.sh",
+          "source_sha256": "4d0d22306a1688e0fe10806034a94e1792c053f460174763a04dbe1b5af33eab"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/complete-phase.sh",
+          "destination_sha256": "d895d7ace8497c8fc9209ad2bf33280b3830ad35da0ea7c06a96ccfd6fddc1af",
+          "source": "scripts/complete-phase.sh",
+          "source_sha256": "d895d7ace8497c8fc9209ad2bf33280b3830ad35da0ea7c06a96ccfd6fddc1af"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/cvss_v4.py",
+          "destination_sha256": "0c0139ae188ba2f18adedeeb89b6e5726554c5b500ade3e483f1647f8a2c51eb",
+          "source": "scripts/cvss_v4.py",
+          "source_sha256": "0c0139ae188ba2f18adedeeb89b6e5726554c5b500ade3e483f1647f8a2c51eb"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/dependency-inventory.py",
+          "destination_sha256": "bdd3b5bc8a3b7c3e476cd1bf2cba5287dbc4c8f55af94e863bc6c310247eca18",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/init-review.sh",
+          "destination_sha256": "72eddc76a6e6cf63835c99bde8f2f14e44aad8106936adcdc526d52893e06265",
+          "source": "scripts/init-review.sh",
+          "source_sha256": "8b629252257049b3c699fa48b3922251f27ba4fb85fd12b6229c75602f47e50d"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/normalize-multitenant-scope.py",
+          "destination_sha256": "4110da80dd31db7aa73eb27ae795e15984a253e08270be5482f02c8445129846",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/reconcile-topology.py",
+          "destination_sha256": "560d6cf096fab74a8b2e5551cc88d2caa79a68d5cf2262a2c5dca41df415b7e8",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build-executive.py",
+          "destination_sha256": "9e6b72570e6725345351b815610135a7f2b0c88d0b325bb235ed926e3cbe723a",
+          "source": "scripts/report/build-executive.py",
+          "source_sha256": "7766892ced7bf14ad9708557bb12533539915c36ca8e00ac07d5bceab2262ae0"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build-markdown.py",
+          "destination_sha256": "c1a846d3e95ddb60d9f966d142878a3e359e972dbf856cc680261f92120e196c",
+          "source": "scripts/report/build-markdown.py",
+          "source_sha256": "62e7a0a706c570f7e2672d97c5bcea26822561037ee65170240d88cedf7d8ff4"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build-sarif.py",
+          "destination_sha256": "922cf1dc7a6d49ad72d1042dcaf3359b0bd114f4ea2210f123014e59864e3dc9",
+          "source": "scripts/report/build-sarif.py",
+          "source_sha256": "0aaceef7fef624e07afca70827ba7892c505477c7cc6f76b4be93038cedcf012"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/report/build.py",
+          "destination_sha256": "376e04a6a5d2bea54a6c485be30ef6d17a4897f09900692b36e65677c39f9e7b",
+          "source": "scripts/report/build.py",
+          "source_sha256": "a1dea5027a9004840cc649c6b6a50a7b3e417c0c17fe3bec21c349cc0ae166ed"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/report/template.html",
+          "destination_sha256": "2f4435fe08bfb73fbd2b03b44ec36e8dd809648f2eb2c258f943ac847ed06dcc",
+          "source": "scripts/report/template.html",
+          "source_sha256": "2f4435fe08bfb73fbd2b03b44ec36e8dd809648f2eb2c258f943ac847ed06dcc"
+        },
+        {
+          "classification": "UNCHANGED",
+          "destination": "scripts/state-utils.sh",
+          "destination_sha256": "58c4d33625183ef0c57ea40cde5b6fa825f4d48696b0b90f441384ec6f6c64bf",
+          "source": "scripts/state-utils.sh",
+          "source_sha256": "58c4d33625183ef0c57ea40cde5b6fa825f4d48696b0b90f441384ec6f6c64bf"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/sync-organization-context.sh",
+          "destination_sha256": "8840cab55e5fa0ad517d4d6c96edbca15f1bb3e6a22c9c08ca7da441bc03bc4f",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/validate-findings.py",
+          "destination_sha256": "a0156a22a033b4b51e4033e40b87210120489b6dd62a180011f75082f93a3899",
+          "source": "scripts/validate-findings.py",
+          "source_sha256": "3930f51ac9155ee90c37e4dd897c0fedc976bbea0fb8b7377b75ed8066c86423"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "scripts/validate-phase.sh",
+          "destination_sha256": "c50fd38a620621e35f7d4b5a12f955fef14ee1b59406b79f6e106f0709c4410a",
+          "source": "scripts/validate-phase.sh",
+          "source_sha256": "69727799361ffe186527d379f63145c76c3fdad04eac292ad0bcc1938a19f452"
+        },
+        {
+          "classification": "PUBLIC_ADDITION",
+          "destination": "scripts/workspace-compat.py",
+          "destination_sha256": "01537f990babb99242b5699f4f2fa8d2213f2769d6b133a1dd1e3cda839b807e",
+          "source": null,
+          "source_sha256": null
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "tests/test_cursor_hooks.py",
+          "destination_sha256": "4948ca76ce2e66a011af216be171f1f358ee14e18dbb09c5434f6b7bebc801e5",
+          "source": "tests/test_cursor_hooks.py",
+          "source_sha256": "64b7586fa9872d7b3edb6304c7e31e01a7394c2c65c81c36efe327a0d48d0090"
+        },
+        {
+          "classification": "ADAPTED",
+          "destination": "tests/test_gate_and_report.py",
+          "destination_sha256": "6c44521427e741cb97b4f2df1d4680745764f0c746e61c32e5ad4c46521f8c05",
+          "source": "tests/test_gate_and_report.py",
+          "source_sha256": "f637292458b832e6ebf3b06c18f1e5403054d2cfcf32bb9325096b9ba27fcc2f"
+        }
+      ],
+      "included_source_file_count": 57,
+      "source_file_count": 1358
+    }
+  },
+  "schema_version": "1",
+  "source_revision": "0c3183e02ec1f1500115233402cabdf7808ec4e6"
+}

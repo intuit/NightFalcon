@@ -1,0 +1,37 @@
+{
+  "name": "nightfalcon",
+  "version": "3.0.0+codex.20260902000000",
+  "description": "Multi-phase adversarial security review with enforced sequencing, blind debate, PoC generation, and validation for Codex.",
+  "author": {
+    "name": "NightFalcon contributors",
+    "url": "https://github.com/intuit/nightfalcon"
+  },
+  "homepage": "https://github.com/intuit/nightfalcon",
+  "repository": "https://github.com/intuit/nightfalcon",
+  "keywords": [
+    "security",
+    "review",
+    "adversarial",
+    "static-analysis",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "NightFalcon for Codex",
+    "shortDescription": "Adversarial repository security review",
+    "longDescription": "Runs an enforced nine-phase security review with context-isolated agents, blind debate, PoC review, and deterministic reporting.",
+    "developerName": "NightFalcon contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Subagents",
+      "Web"
+    ],
+    "defaultPrompt": [
+      "Use $nightfalcon to review a GitHub repository.",
+      "Use $nightfalcon to triage existing findings."
+    ],
+    "brandColor": "#111827"
+  }
+}

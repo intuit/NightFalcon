@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NightFalcon organization context graph",
+  "type": "object",
+  "required": ["schema_version", "controls", "platform_services", "standards", "fingerprint_index"],
+  "properties": {
+    "schema_version": {"const": "2"},
+    "provider": {"type": "string"},
+    "generated_at": {"type": ["string", "null"]},
+    "controls": {"type": "array", "items": {"$ref": "#/$defs/control"}},
+    "platform_services": {"type": "array", "items": {"$ref": "#/$defs/control"}},
+    "standards": {"type": "array", "items": {"$ref": "#/$defs/standard"}},
+    "fingerprint_index": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "string"}}}
+  },
+  "$defs": {
+    "control": {
+      "type": "object",
+      "required": ["name", "kind", "control_id", "fingerprints", "applicable_standards"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["control", "platform_service"]},
+        "control_id": {"type": ["string", "null"], "pattern": "^CTRL-[0-9]{4}$"},
+        "note_path": {"type": ["string", "null"]},
+        "fingerprints": {"type": "array", "items": {"type": "string"}},
+        "applicable_standards": {"type": "array", "items": {"type": "string", "pattern": "^STD-"}},
+        "coverage_probes": {"type": "array", "items": {"type": "string"}},
+        "remediation_example": {
+          "type": ["object", "null"],
+          "required": ["summary", "snippet"],
+          "properties": {
+            "summary": {"type": "string", "minLength": 1},
+            "snippet": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "standard": {
+      "type": "object",
+      "required": ["id", "title", "binding_statement", "canonical_controls"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^STD-"},
+        "title": {"type": "string", "minLength": 1},
+        "policy_area": {"type": ["string", "null"]},
+        "binding_statement": {"type": "string", "minLength": 1},
+        "note_path": {"type": ["string", "null"]},
+        "canonical_controls": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

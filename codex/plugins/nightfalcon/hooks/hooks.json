@@ -1,0 +1,71 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/nightfalcon_hook.py\"",
+            "statusMessage": "Loading NightFalcon Codex context"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/nightfalcon_hook.py\"",
+            "statusMessage": "Recording NightFalcon passive model-selection audit"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/nightfalcon_hook.py\"",
+            "statusMessage": "Registering NightFalcon agent lifecycle"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/nightfalcon_hook.py\"",
+            "statusMessage": "Updating NightFalcon active-agent registry"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/nightfalcon_hook.py\"",
+            "statusMessage": "Checking NightFalcon phase output"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/nightfalcon_hook.py\"",
+            "statusMessage": "Checking NightFalcon write path"
+          }
+        ]
+      }
+    ]
+  }
+}

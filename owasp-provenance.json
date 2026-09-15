@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "retrieved_on": "2026-08-26",
+  "adaptation": "Concise NightFalcon routing summaries; category names retained, explanatory text independently written.",
+  "frameworks": [
+    {"id":"web","name":"OWASP Top 10","edition":"2025","status":"final","stable":true,"source_url":"https://owasp.org/Top10/","license":"CC-BY-SA-4.0"},
+    {"id":"api","name":"OWASP API Security Top 10","edition":"2023","status":"final","stable":true,"source_url":"https://owasp.org/API-Security/editions/2023/en/0x03-introduction/","license":"CC-BY-SA-4.0"},
+    {"id":"mobile","name":"OWASP Mobile Top 10","edition":"2024","status":"final","stable":true,"source_url":"https://owasp.org/www-project-mobile-top-10/","license":"CC-BY-SA-4.0"},
+    {"id":"llm","name":"OWASP Top 10 for LLM Applications","edition":"2026","status":"final","stable":true,"source_url":"https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/","license":"CC-BY-SA-4.0"},
+    {"id":"agentic","name":"OWASP Top 10 for Agentic Applications","edition":"2026","status":"final","stable":true,"source_url":"https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/","license":"CC-BY-SA-4.0"},
+    {"id":"kubernetes","name":"OWASP Kubernetes Top 10","edition":"2025","status":"final","stable":true,"source_url":"https://owasp.org/www-project-kubernetes-top-ten/","license":"CC-BY-NC-SA-4.0","usage":"identifier-and-title-reference-only","bundled_adaptation":false},
+    {"id":"mcp","name":"OWASP MCP Top 10","edition":"2025-beta","status":"beta","stable":false,"source_url":"https://owasp.org/www-project-mcp-top-10/","license":"CC-BY-NC-SA-4.0","usage":"identifier-and-title-reference-only","bundled_adaptation":false},
+    {"id":"nhi","name":"OWASP Non-Human Identities Top 10","edition":"2025","status":"final","stable":true,"source_url":"https://owasp.org/www-project-non-human-identities-top-10/2025/","license":"CC-BY-SA-4.0"},
+    {"id":"smart-contract","name":"OWASP Smart Contract Top 10","edition":"2026","status":"final","stable":true,"source_url":"https://scs.owasp.org/sctop10/","license":"CC-BY-NC-SA-4.0","usage":"identifier-and-title-reference-only","bundled_adaptation":false},
+    {"id":"business-logic-abuse","name":"OWASP Top 10 for Business Logic Abuse","edition":"2025","status":"final","stable":true,"source_url":"https://owasp.org/www-project-top-10-for-business-logic-abuse/","license":"CC-BY-SA-4.0"},
+    {"id":"oss","name":"OWASP Open Source Software Top 10","edition":"current","status":"current","stable":true,"source_url":"https://owasp.org/www-project-open-source-software-top-10/","license":"CC-BY-SA-4.0"},
+    {"id":"agentic-skills","name":"OWASP Agentic Skills Top 10","edition":"v1-public-review","status":"public-review-draft","stable":false,"source_url":"https://owasp.org/www-project-agentic-skills-top-10/","license":"CC-BY-SA-4.0"},
+    {"id":"asvs","name":"OWASP Application Security Verification Standard","edition":"5.0.0","status":"final","stable":true,"source_url":"https://owasp.org/www-project-application-security-verification-standard/","license":"CC-BY-SA-4.0"},
+    {"id":"cicd","name":"OWASP Top 10 CI/CD Security Risks","edition":"1.0-2022","status":"latest-stable","stable":true,"source_url":"https://owasp.org/www-project-top-10-ci-cd-security-risks/","license":"CC-BY-SA-4.0"},
+    {"id":"desktop","name":"OWASP Desktop App Security Top 10","edition":"2021","status":"latest-stable","stable":true,"source_url":"https://owasp.org/www-project-desktop-app-security-top-10/","license":"CC-BY-SA-4.0"},
+    {"id":"serverless","name":"OWASP Serverless Top 10","edition":"2017-interpretation","status":"latest-project-edition","stable":true,"source_url":"https://owasp.org/www-project-serverless-top-10/","license":"CC-BY-SA-4.0"}
+  ]
+}

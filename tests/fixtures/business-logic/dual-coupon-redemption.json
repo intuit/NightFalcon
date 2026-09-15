@@ -1,0 +1,20 @@
+{
+  "business_logic_invariants": {
+    "flow_id": "Flow-1",
+    "invariant": "one coupon may be redeemed at most once",
+    "key_scope": "object",
+    "bounds": {"coupon_redemptions": {"maximum": 1}},
+    "read_check_write": ["read coupon.used=false", "check eligible", "credit account", "write coupon.used=true"],
+    "atomicity": {"transaction": false, "lock": false, "compare_and_swap": false},
+    "idempotency": {"key": null, "binding": null, "lifetime": null},
+    "actors": ["actor-a", "actor-b"],
+    "interleavings": [["a:read unused", "b:read unused", "a:credit", "b:credit", "a:mark used", "b:mark used"]],
+    "state_transitions": ["available -> redeemed"],
+    "rollback": {"atomic": false},
+    "retries": {"bounded": false},
+    "replay": {"window": "unbounded"},
+    "quotas": {"redemptions_per_coupon": 1},
+    "owasp_bla": ["BLA1:2025", "BLA2:2025"],
+    "evidence": ["check and write occur outside one atomic operation"]
+  }
+}

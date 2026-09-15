@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# NightFalcon review workspaces and generated output
+findings/
+output/
+repos/
+state.json
+# Retained compatibility fixture; clean-checkout CI requires this file.
+!tests/fixtures/workspace-v1/state.json
+.nightfalcon-active
+*.normalized.json
+
+# Cursor integrations may persist local session memory during live invocations.
+.terragraph/

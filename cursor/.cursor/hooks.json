@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "type": "command",
+        "command": "./.cursor/hooks/gate-guard.sh",
+        "timeout": 30
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "type": "command",
+        "command": "./.cursor/hooks/edit-log.sh",
+        "timeout": 15
+      }
+    ],
+    "stop": [
+      {
+        "type": "command",
+        "command": "./.cursor/hooks/stop-enforce.sh",
+        "timeout": 15,
+        "loop_limit": 3
+      }
+    ]
+  }
+}

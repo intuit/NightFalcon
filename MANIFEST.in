@@ -1,0 +1,6 @@
+include LICENSE
+include NOTICE
+include README.md
+include VERSION
+include src/nightfalcon/_payload-manifest.json
+recursive-include src/nightfalcon/_payloads *

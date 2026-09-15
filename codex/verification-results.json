@@ -1,0 +1,457 @@
+{
+  "schema_version": 2,
+  "known_limitations": [
+    "PASS: Current Claude Code, Codex CLI, and Cursor Agent package discovery is documented in docs/verification/2026-08-26-client-canaries.md.",
+    "TARGET-DEPENDENT: Full phase-0 through phase-8 execution against an external repository is operational validation, not a package-release prerequisite; it requires an operator-selected target, provider authentication, and authorized scope.",
+    "LIMITATION: Deterministic tests cover user-selected model policy and hook contracts; package evidence does not claim live UI persistence or live multi-phase model-transition behavior.",
+    "PASS-WITH-DELTA: NightFalcon leaves spawn model and reasoning overrides unset, records initial and passive advisory provenance, and never rejects, retries, or reroutes work because an observed model differs."
+  ],
+  "runs": [
+    {
+      "run_id": "20260827T193417.252202Z",
+      "timestamp_utc": "2026-08-27T19:34:17Z",
+      "status": "PASS",
+      "source_digest": "f661256a7b7f8bfe6e095b9347fa012828294a0d09f511b3ffe0ddb23cca13b7",
+      "source_file_count": 305,
+      "matrix_kind": "core-only",
+      "matrix_digest": "0e80951adae29da6465d61600410b1a799118bc627c977cb466bbad37f155ebf",
+      "command_names": [
+        "wrapper-tests",
+        "plugin-tests",
+        "plugin-validator",
+        "skill-validator",
+        "shell-syntax",
+        "python-compile",
+        "json-validation",
+        "inventory-regeneration",
+        "inventory-stability",
+        "port-scope"
+      ],
+      "commands": [
+        {
+          "name": "wrapper-tests",
+          "command": [
+            "<PYTHON>",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "<WRAPPER>/tests",
+            "-p",
+            "test_*.py",
+            "-v"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {
+            "PYTHONDONTWRITEBYTECODE": "1"
+          },
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 42,
+          "stdout_sha256": "2f69b3192bbdc05570912c28e9274f9a9f6a11d12406fab53c1fb4e5538bf41c",
+          "stderr_bytes": 18261,
+          "stderr_sha256": "ba8888e13e9babe13a9db7e87158f4d4ba2d3c9faa6d2f9b4bec8bcc005e2e97"
+        },
+        {
+          "name": "plugin-tests",
+          "command": [
+            "<PYTHON>",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "<WRAPPER>/plugins/nightfalcon/tests",
+            "-p",
+            "test_*.py",
+            "-v"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {
+            "PYTHONDONTWRITEBYTECODE": "1"
+          },
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 27086,
+          "stderr_sha256": "41738e3d369dc2d3bfe44e640009b4bb56a6693f855787410ca3d51f995149de"
+        },
+        {
+          "name": "plugin-validator",
+          "command": [
+            "<YAML_PYTHON>",
+            "<PLUGIN_VALIDATOR>",
+            "<WRAPPER>/plugins/nightfalcon"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 56,
+          "stdout_sha256": "dd04670e5d0506444ced16744cab2db18bbf228bb673f2beaec16c3ea6be7748",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "skill-validator",
+          "command": [
+            "<YAML_PYTHON>",
+            "<SKILL_VALIDATOR>",
+            "<WRAPPER>/plugins/nightfalcon/skills/nightfalcon"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 16,
+          "stdout_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "shell-syntax",
+          "command": [
+            "bash",
+            "-c",
+            "set -euo pipefail; while IFS= read -r -d \"\" file; do bash -n \"$file\"; done < <(find \"$1\" -type f -name \"*.sh\" -print0)",
+            "verify-shells",
+            "<WRAPPER>/plugins/nightfalcon/scripts"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "python-compile",
+          "command": [
+            "<PYTHON>",
+            "-m",
+            "compileall",
+            "-q",
+            "<WRAPPER>/plugins/nightfalcon/scripts",
+            "<WRAPPER>/plugins/nightfalcon/hooks"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {
+            "PYTHONDONTWRITEBYTECODE": "1",
+            "PYTHONPYCACHEPREFIX": "<RUN_TEMP>/python-bytecode"
+          },
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "json-validation",
+          "command": [
+            "bash",
+            "-c",
+            "set -euo pipefail; while IFS= read -r -d \"\" file; do \"$2\" -m json.tool \"$file\" >/dev/null; done < <(find \"$1\" -type f -name \"*.json\" -print0)",
+            "verify-json",
+            "<WRAPPER>/plugins/nightfalcon",
+            "<PYTHON>"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "inventory-regeneration",
+          "command": [
+            "<PYTHON>",
+            "<WRAPPER>/scripts/build-port-inventory.py"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 55,
+          "stdout_sha256": "ecd31c4955f33159c13258c8de7891e7f5518a1b8ab1fd0b0c9ccf1a12ef1d64",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "inventory-stability",
+          "command": [
+            "<PYTHON>",
+            "<WRAPPER>/scripts/run-verification.py",
+            "--internal-file-equals",
+            "<INVENTORY_SNAPSHOT>",
+            "<WRAPPER>/migration-map.json"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 58,
+          "stdout_sha256": "23a10e1480e608ed336f3d8e15bad20b777f03e34a6a60fd6cb8836bfd2a38c4",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "port-scope",
+          "command": [
+            "<PYTHON>",
+            "<WRAPPER>/scripts/run-verification.py",
+            "--internal-scope-check",
+            "<WRAPPER>",
+            "86015f536797e2ed7168f1cd1c2a0dbdaf35bf83"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 92,
+          "stdout_sha256": "0607c358fd8fc0f877bb7d4eb6a8d2825e693dd4bfb36bb58ea2ae4bfe4442ff",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "run_id": "20260827T193917.980259Z",
+      "timestamp_utc": "2026-08-27T19:39:17Z",
+      "status": "PASS",
+      "source_digest": "f661256a7b7f8bfe6e095b9347fa012828294a0d09f511b3ffe0ddb23cca13b7",
+      "source_file_count": 305,
+      "matrix_kind": "core-only",
+      "matrix_digest": "0e80951adae29da6465d61600410b1a799118bc627c977cb466bbad37f155ebf",
+      "command_names": [
+        "wrapper-tests",
+        "plugin-tests",
+        "plugin-validator",
+        "skill-validator",
+        "shell-syntax",
+        "python-compile",
+        "json-validation",
+        "inventory-regeneration",
+        "inventory-stability",
+        "port-scope"
+      ],
+      "commands": [
+        {
+          "name": "wrapper-tests",
+          "command": [
+            "<PYTHON>",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "<WRAPPER>/tests",
+            "-p",
+            "test_*.py",
+            "-v"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {
+            "PYTHONDONTWRITEBYTECODE": "1"
+          },
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 42,
+          "stdout_sha256": "2f69b3192bbdc05570912c28e9274f9a9f6a11d12406fab53c1fb4e5538bf41c",
+          "stderr_bytes": 18261,
+          "stderr_sha256": "ca4696711d6f7ea76d46a5599b6ae625bcc26563847268aaa4589ce85ce3cedd"
+        },
+        {
+          "name": "plugin-tests",
+          "command": [
+            "<PYTHON>",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "<WRAPPER>/plugins/nightfalcon/tests",
+            "-p",
+            "test_*.py",
+            "-v"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {
+            "PYTHONDONTWRITEBYTECODE": "1"
+          },
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 27086,
+          "stderr_sha256": "1d05e73ff612ea416f0d3c150ef9a52f4c3d40f35066496d30b47c07bff71111"
+        },
+        {
+          "name": "plugin-validator",
+          "command": [
+            "<YAML_PYTHON>",
+            "<PLUGIN_VALIDATOR>",
+            "<WRAPPER>/plugins/nightfalcon"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 56,
+          "stdout_sha256": "dd04670e5d0506444ced16744cab2db18bbf228bb673f2beaec16c3ea6be7748",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "skill-validator",
+          "command": [
+            "<YAML_PYTHON>",
+            "<SKILL_VALIDATOR>",
+            "<WRAPPER>/plugins/nightfalcon/skills/nightfalcon"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 16,
+          "stdout_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "shell-syntax",
+          "command": [
+            "bash",
+            "-c",
+            "set -euo pipefail; while IFS= read -r -d \"\" file; do bash -n \"$file\"; done < <(find \"$1\" -type f -name \"*.sh\" -print0)",
+            "verify-shells",
+            "<WRAPPER>/plugins/nightfalcon/scripts"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "python-compile",
+          "command": [
+            "<PYTHON>",
+            "-m",
+            "compileall",
+            "-q",
+            "<WRAPPER>/plugins/nightfalcon/scripts",
+            "<WRAPPER>/plugins/nightfalcon/hooks"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {
+            "PYTHONDONTWRITEBYTECODE": "1",
+            "PYTHONPYCACHEPREFIX": "<RUN_TEMP>/python-bytecode"
+          },
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "json-validation",
+          "command": [
+            "bash",
+            "-c",
+            "set -euo pipefail; while IFS= read -r -d \"\" file; do \"$2\" -m json.tool \"$file\" >/dev/null; done < <(find \"$1\" -type f -name \"*.json\" -print0)",
+            "verify-json",
+            "<WRAPPER>/plugins/nightfalcon",
+            "<PYTHON>"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "inventory-regeneration",
+          "command": [
+            "<PYTHON>",
+            "<WRAPPER>/scripts/build-port-inventory.py"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 55,
+          "stdout_sha256": "ecd31c4955f33159c13258c8de7891e7f5518a1b8ab1fd0b0c9ccf1a12ef1d64",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "inventory-stability",
+          "command": [
+            "<PYTHON>",
+            "<WRAPPER>/scripts/run-verification.py",
+            "--internal-file-equals",
+            "<INVENTORY_SNAPSHOT>",
+            "<WRAPPER>/migration-map.json"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 58,
+          "stdout_sha256": "23a10e1480e608ed336f3d8e15bad20b777f03e34a6a60fd6cb8836bfd2a38c4",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "port-scope",
+          "command": [
+            "<PYTHON>",
+            "<WRAPPER>/scripts/run-verification.py",
+            "--internal-scope-check",
+            "<WRAPPER>",
+            "86015f536797e2ed7168f1cd1c2a0dbdaf35bf83"
+          ],
+          "cwd": "<WRAPPER>",
+          "env": {},
+          "required_stdout": null,
+          "exit_code": 0,
+          "passed": true,
+          "stdout_bytes": 92,
+          "stdout_sha256": "0607c358fd8fc0f877bb7d4eb6a8d2825e693dd4bfb36bb58ea2ae4bfe4442ff",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ]
+}

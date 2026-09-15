@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "nightfalcon",
+  "displayName": "NightFalcon",
+  "version": "3.0.0",
+  "description": "Multi-phase adversarial security review with enforced phase sequencing, debate, PoC generation, and validation.",
+  "author": {"name": "NightFalcon contributors"},
+  "repository": "https://github.com/intuit/nightfalcon",
+  "keywords": ["security", "review", "adversarial", "static-analysis"]
+}

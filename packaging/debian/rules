@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=none
+
+override_dh_auto_build:
+	python3 scripts/release/build-zipapp.py --repo . --output-dir packaging/debian/build
+
+override_dh_auto_test:
+	python3 packaging/debian/build/nightfalcon-3.0.0.pyz version
+
+override_dh_auto_install:
+	install -D -m 0755 packaging/debian/build/nightfalcon-3.0.0.pyz debian/nightfalcon/usr/lib/nightfalcon/nightfalcon.pyz
+	install -D -m 0755 packaging/debian/nightfalcon debian/nightfalcon/usr/bin/nightfalcon

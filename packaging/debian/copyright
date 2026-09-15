@@ -1,0 +1,13 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: NightFalcon
+Source: https://github.com/intuit/nightfalcon
+
+Files: *
+Copyright: NightFalcon contributors
+License: Apache-2.0
+ See /usr/share/common-licenses/Apache-2.0 on Debian systems.
+
+Files: shared/owasp/* claude/references/OWASP/* codex/plugins/nightfalcon/references/OWASP/* cursor/references/OWASP/*
+Copyright: OWASP contributors and NightFalcon contributors
+License: CC-BY-SA-4.0
+ See repository NOTICE and OWASP attribution files for exact boundaries.

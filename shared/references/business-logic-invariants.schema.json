@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"NightFalcon business_logic_invariants",
+  "type":"object",
+  "required":["flow_id","invariant","key_scope","bounds","read_check_write","atomicity","idempotency","actors","interleavings","state_transitions","rollback","retries","replay","quotas","evidence"],
+  "properties":{
+    "flow_id":{"type":"string","pattern":"^Flow-[1-9][0-9]*$"},
+    "invariant":{"type":"string","minLength":1},
+    "key_scope":{"enum":["principal","tenant","account","object","global","composite","unknown"]},
+    "bounds":{"type":"object"},
+    "read_check_write":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "atomicity":{"type":"object"},
+    "idempotency":{"type":"object"},
+    "actors":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "interleavings":{"type":"array","items":{"type":"array","items":{"type":"string"}}},
+    "state_transitions":{"type":"array","items":{"type":"string"}},
+    "rollback":{"type":"object"},
+    "retries":{"type":"object"},
+    "replay":{"type":"object"},
+    "quotas":{"type":"object"},
+    "owasp_bla":{"type":"array","items":{"pattern":"^BLA(?:[1-9]|10):2025$"}},
+    "evidence":{"type":"array","minItems":1,"items":{"type":"string"}}
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "relationship_context": {
+    "flow_id": "Flow-1",
+    "case_id": "AUTHZ-1",
+    "principal": {"id": "user-a", "tenant": "tenant-a", "role": "member", "credential": "bearer"},
+    "action": "read invoice",
+    "object": {"type": "invoice", "id": "invoice-b", "selector_provenance": "path"},
+    "ownership_binding": {"owner": "user-b", "tenant": "tenant-b"},
+    "relationship": "cross-tenant",
+    "selector_substitution": {"source": "path invoice id", "result": "invoice-b"},
+    "observed_decision": "allow",
+    "expected_decision": "deny",
+    "enforcement_points": ["InvoiceController.get", "InvoiceRepository.findById"],
+    "evidence": ["repository lookup uses object id without tenant predicate"]
+  }
+}

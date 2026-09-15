@@ -1,0 +1,44 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PAYLOAD=$(cat); WORKSPACE=$(printf '%s' \"$PAYLOAD\" | python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/workspace.py\"); [ -n \"$WORKSPACE\" ] || exit 0; SID=$(printf '%s' \"$PAYLOAD\" | jq -r '.session_id // empty' 2>/dev/null); bash \"${CLAUDE_PLUGIN_ROOT}/scripts/check-gate.sh\" --enforce-output --session \"${SID:-}\" --workspace \"$WORKSPACE\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/bash-guard.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PAYLOAD=$(cat); WORKSPACE=$(printf '%s' \"$PAYLOAD\" | python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/workspace.py\"); [ -n \"$WORKSPACE\" ] || exit 0; FILE_PATH=$(printf '%s' \"$PAYLOAD\" | jq -r '.tool_input.file_path // empty' 2>/dev/null); [ -z \"$FILE_PATH\" ] && exit 0; bash \"${CLAUDE_PLUGIN_ROOT}/scripts/check-gate.sh\" --check-path \"$FILE_PATH\" --workspace \"$WORKSPACE\""
+          }
+        ]
+      },
+      {
+        "matcher": "Task|Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PAYLOAD=$(cat); WORKSPACE=$(printf '%s' \"$PAYLOAD\" | python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/workspace.py\"); [ -n \"$WORKSPACE\" ] || exit 0; SID=$(printf '%s' \"$PAYLOAD\" | jq -r '.session_id // empty' 2>/dev/null); bash \"${CLAUDE_PLUGIN_ROOT}/scripts/check-gate.sh\" --count-agent-spawn --session \"${SID:-unknown}\" --workspace \"$WORKSPACE\""
+          }
+        ]
+      }
+    ]
+  }
+}

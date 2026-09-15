@@ -1,0 +1,15 @@
+Source: nightfalcon
+Section: devel
+Priority: optional
+Maintainer: NightFalcon contributors
+Build-Depends: debhelper-compat (= 13), python3 (>= 3.11)
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://github.com/intuit/nightfalcon
+
+Package: nightfalcon
+Architecture: all
+Depends: python3 (>= 3.11)
+Description: multi-client agentic security review harness
+ NightFalcon installs and verifies its Claude Code, Codex, and Cursor
+ security-review distributions from one hash-bound offline payload.

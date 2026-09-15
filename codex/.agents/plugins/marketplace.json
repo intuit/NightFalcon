@@ -1,0 +1,12 @@
+{
+  "name": "nightfalcon-open",
+  "interface": {"displayName": "NightFalcon Open Source"},
+  "plugins": [
+    {
+      "name": "nightfalcon",
+      "source": {"source": "local", "path": "./plugins/nightfalcon"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Developer Tools"
+    }
+  ]
+}

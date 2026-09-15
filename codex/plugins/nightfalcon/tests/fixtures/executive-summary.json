@@ -1,0 +1,44 @@
+{
+  "report_title": "NightFalcon Security Review",
+  "report_subtitle": "Deterministic report safety fixture",
+  "footer_text": "Generated from a fixed test fixture",
+  "totals": {
+    "P0": 1,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "P4": 0,
+    "clean_repos": 0
+  },
+  "summary_markdown": "# NightFalcon\n\nOne representative finding.",
+  "validation_corrections": [],
+  "repos": [
+    {
+      "slug": "demo",
+      "most_severe": "P0",
+      "summary_note": "One deterministic safety finding",
+      "counts": {
+        "P0": 1,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0,
+        "P4": 0
+      },
+      "findings": [
+        {
+          "finding_id": "F-001",
+          "tier": "P0",
+          "title": "Script terminator is treated as data",
+          "category": "Output encoding",
+          "location": "src/render.py:1",
+          "what_happens_md": "Attacker-controlled text includes </script><script>alert(1)</script>.",
+          "attack_steps_md": "1. Supply the crafted description.\n2. Build the report.",
+          "evidence_md": "```html\n</script><script>alert(1)</script>\n```",
+          "fix_md": "Escape HTML and JSON-in-script boundaries deterministically.",
+          "severity_md": "- Reachability: report input.\n- Impact: script injection if unescaped.",
+          "validation": "CURRENT"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"NightFalcon relationship_context",
+  "type":"object",
+  "required":["flow_id","case_id","principal","action","object","relationship","selector_substitution","observed_decision","expected_decision","enforcement_points","evidence"],
+  "properties":{
+    "flow_id":{"type":"string","pattern":"^Flow-[1-9][0-9]*$"},
+    "case_id":{"type":"string","minLength":1},
+    "principal":{"type":"object"},
+    "action":{"type":"string","minLength":1},
+    "object":{"type":"object","required":["type","selector_provenance"]},
+    "ownership_binding":{"type":["object","null"]},
+    "relationship":{"enum":["owner","same-tenant-nonowner","cross-tenant","delegated","admin","anonymous","unknown"]},
+    "selector_substitution":{"type":"object","required":["source","result"],"properties":{"source":{"type":"string","minLength":1},"result":{"type":"string","minLength":1}}},
+    "observed_decision":{"enum":["allow","deny","conditional","unknown"]},
+    "expected_decision":{"enum":["allow","deny","conditional","unknown"]},
+    "enforcement_points":{"type":"array","items":{"type":"string"}},
+    "evidence":{"type":"array","minItems":1,"items":{"type":"string"}}
+  }
+}

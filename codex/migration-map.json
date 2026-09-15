@@ -1,0 +1,651 @@
+{
+  "destination_file_count": 80,
+  "files": [
+    {
+      "classification": "ADAPTED",
+      "destination": ".codex-plugin/plugin.json",
+      "destination_sha256": "e65a5d2b445051c625015418807de457d44391629b539fcc5c9978ce3a30a2f4",
+      "reason": "Adapted for public distribution.",
+      "sha256": "0623da09310e0e0d30f1ae24a2dbe743ba9db59fb0e0d05dedf9abe2e0292921",
+      "source": ".codex-plugin/plugin.json"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "AGENTS.md",
+      "destination_sha256": "37b6692d8568be3d8ca65005b7a13c4f4fe7aec5b82a1d7757230ba89a582c27",
+      "reason": "Adapted for public distribution.",
+      "sha256": "e982df23bca4d097ec19358bb9deb7351f739b82a0ba247302b446f79425b2c8",
+      "source": "AGENTS.md"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "LICENSE",
+      "destination_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "NOTICE",
+      "destination_sha256": "380f5387d69a805474494a8e4b8218daebe7f188472d8af276edbe01f5e7296f",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "README.md",
+      "destination_sha256": "9fa061f81a64fb30facc9403b63048dd2b461eef7d439df80e969b3600aa0d6a",
+      "reason": "Adapted for public distribution.",
+      "sha256": "77f413192e9f082d1fcd3be1dd8c5f35e1647e392dc6494f8f107009bb4153de",
+      "source": "README.md"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "hooks/.gitkeep",
+      "destination_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "source": "hooks/.gitkeep"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "hooks/hooks.json",
+      "destination_sha256": "603a2a0f6e88e65d456d73803a7b3b131ccf211028bfeadf9d63725edf549597",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "603a2a0f6e88e65d456d73803a7b3b131ccf211028bfeadf9d63725edf549597",
+      "source": "hooks/hooks.json"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "hooks/nightfalcon_hook.py",
+      "destination_sha256": "8c628afea8f3e7f0ee59d3219466d67f9fb6a4c978744d18095b4cb6366ad0a1",
+      "reason": "Adapted for public distribution.",
+      "sha256": "6791aa34a74a42770e5950270d1d3cf14af6e653759deeb0a26d5261db7e0279",
+      "source": "hooks/nightfalcon_hook.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-0.md",
+      "destination_sha256": "677b117b797424da7a3ee43495eda68849a92dc0ff0308d4f1089f09315aad5a",
+      "reason": "Adapted for public distribution.",
+      "sha256": "79d5343e4abf1c3305ba69529e53befda159826b6adaeb9e96fd1152f3844b4d",
+      "source": "phases/phase-0.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-1.md",
+      "destination_sha256": "a87b76cd65e540ad66543aeba31356528d4f57bf65cf9d70755339b03ea60e89",
+      "reason": "Adapted for public distribution.",
+      "sha256": "309309721c7ad3634399d641b61306e884810264f5d639449b0060104ece0aa9",
+      "source": "phases/phase-1.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-2.md",
+      "destination_sha256": "4f31ff6af4e8a70c032fcf4263a10fe3a133c86addb2453139f45b5d7382c205",
+      "reason": "Adapted for public distribution.",
+      "sha256": "5a90bf50d53b5491e4743a528df5e8784fec3bffe44adedc53eb5fc848be2b75",
+      "source": "phases/phase-2.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-3.md",
+      "destination_sha256": "fa3b6daa235851c301fa4b66cc6672c548ab17b2f46218f64e2eb3f2de15dd4a",
+      "reason": "Adapted for public distribution.",
+      "sha256": "79e294e69d89dac3637a86650c9c22a1d8ef8b4d56a0610c1bde5e47cd59be6b",
+      "source": "phases/phase-3.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-4.md",
+      "destination_sha256": "af9e2fe3d86357f86a4da23b56a0ae35092ae64717f4f90de3600a5b89a250f8",
+      "reason": "Adapted for public distribution.",
+      "sha256": "54dfc7835bf33458a83845478c231cf3523876d7ae599a60ef8d1f626aa1dbb0",
+      "source": "phases/phase-4.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-5.md",
+      "destination_sha256": "b035769db83684d88fddae1f5accfedae7695b4a9c61e350a2f4f29d32aaa8ba",
+      "reason": "Adapted for public distribution.",
+      "sha256": "313cbc4ead71ed19729eebbc6481b68db9392ba38ed37e2b755f7b7b7c441f50",
+      "source": "phases/phase-5.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-6.md",
+      "destination_sha256": "894b78eea0999fecfaed5cd25c6fff85b886f248ca178f0a44e15f991ae0b7c9",
+      "reason": "Adapted for public distribution.",
+      "sha256": "3525fb16ccf69eef681e3868809fc3e6e0e333a5e88f05f09721c86e5cf67cdd",
+      "source": "phases/phase-6.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-7.md",
+      "destination_sha256": "9a4c866bf794d9659877b17d0b1cd3f0a3ec5e134e477766bee8ad30a5da72de",
+      "reason": "Adapted for public distribution.",
+      "sha256": "69d5786497e5db35cc843c0e64be862d2f43b418ed2e9870969a28d033a39354",
+      "source": "phases/phase-7.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-8.md",
+      "destination_sha256": "65e8650d03fe31e26fd81aa8128ac3311ade043b3c25d301ecf5ddcbdfcb5a0b",
+      "reason": "Adapted for public distribution.",
+      "sha256": "c52905c8a467afca8cda7ec07c472957b99262f42bbb29c0ad445ebac5d450ab",
+      "source": "phases/phase-8.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-da.md",
+      "destination_sha256": "ce4411c5495a944a4b7a87f58404c159ddd68b7024dbb00464f31c63f79b5f42",
+      "reason": "Adapted for public distribution.",
+      "sha256": "5a6b936a90e8fef2e38a3baf27fc8ce64d02cf0760d25e77600caa13376e2534",
+      "source": "phases/phase-da.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/phase-poc-reviewer.md",
+      "destination_sha256": "1bc94c35cb5e0620800d2113edce1de1c72871accf99cc83ca058fe00978c65d",
+      "reason": "Adapted for public distribution.",
+      "sha256": "3bd4f11a6d44008d4a33a0ce04f16089fd8250e0932a8d6b5a61730ea30267ae",
+      "source": "phases/phase-poc-reviewer.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "phases/triage-ingest.md",
+      "destination_sha256": "ebd0c4f0eb52d2c354b8a941ab16905afa7ecc90bf9980dfb3fcc78e2010a468",
+      "reason": "Adapted for public distribution.",
+      "sha256": "bc08eddf0f3671a20fd18c704aa0f3e58f0c14fc3c166d29af390610f6429d6d",
+      "source": "phases/triage-ingest.md"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/OWASP/ATTRIBUTION.md",
+      "destination_sha256": "8e2292762d8aa45bd155b7c0d93cb4fe4bacb591fba9dcdbc21542cd6c766d28",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/OWASP/OWASP Framework Index.md",
+      "destination_sha256": "101a72264db3026508a1e74d9c8074e1fc972142f2b3e3c6c6635bf7e25efeab",
+      "reason": "Adapted for public distribution.",
+      "sha256": "aa5ac370762314106989dab4c6f48fb3579b08dcb321ec7017bf63d924aa86f4",
+      "source": "references/OWASP/OWASP Framework Index.md"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/OWASP/OWASP_ASVS_5.0.0.md",
+      "destination_sha256": "bdba67441c1778c4a7f857eaf2bf25d99076e4b29466b4afc8349a933c7d0696",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/OWASP/OWASP_Cloud_Agentic_and_Identity.md",
+      "destination_sha256": "6a0c69b1a21b08661fa1196e896363db285925056cbe918cd58223ade5b5a14c",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/OWASP/_graph.json",
+      "destination_sha256": "ffb02093bc06d5e4c693243c29261f63fe650c968cae3ded4be01750635783e6",
+      "reason": "Adapted for public distribution.",
+      "sha256": "64628965eed1f3f4404f486d4cf5bef42043932a52a13e974ecadd59b08b4282",
+      "source": "references/OWASP/_graph.json"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/OWASP/owasp-fingerprints.yaml",
+      "destination_sha256": "6961473dd270bc9210f6d587096d9d13720b9f88cc0eba210489f706b32a210e",
+      "reason": "Adapted for public distribution.",
+      "sha256": "2af0eca3a6de0d99b78a3295ebfeb1f5cec43de61af2f8f4e5ecaf0f5f25b70a",
+      "source": "references/OWASP/owasp-fingerprints.yaml"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/analysis-contracts.md",
+      "destination_sha256": "e1ea2554c830750db8746217502a3b5da7d4dfd18f9974482d8bb317b3e515ce",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "references/attack-patterns.md",
+      "destination_sha256": "f55ce8e4bf7765465816c20e3a861228f9ac1f442a5e907ac64dff30977e7e35",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "f55ce8e4bf7765465816c20e3a861228f9ac1f442a5e907ac64dff30977e7e35",
+      "source": "references/attack-patterns.md"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/authorization-relationship.schema.json",
+      "destination_sha256": "138b7e768f64600a7ed517f4273fbfbbed6d9ab97ba8f1c1ab08963eea0bf09b",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/business-logic-invariants.schema.json",
+      "destination_sha256": "695357da664654dc694e7df158e9b71de7e786d81c5f7192044bf468021f2d74",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/context-scope.md",
+      "destination_sha256": "fc7eabe21a7ef684fac6431d5a3509c6006bebb72c1ce1b0e29ff0d1977efe58",
+      "reason": "Adapted for public distribution.",
+      "sha256": "5b5ddaf388dc691366a4c7dc9934323c75571203d68e5e4354d25278232f8014",
+      "source": "references/context-scope.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/cvss-policy.md",
+      "destination_sha256": "0410bd52dfb2349a1fb9174cb9558e214d0ec1bf7c8f7c92d40de9cb47f6443c",
+      "reason": "Adapted for public distribution.",
+      "sha256": "dacb35ba98309a20a13a3d6de0eacbf1f2c8ec84eba1ebe827ed8262358cb298",
+      "source": "references/cvss-policy.md"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "references/data/sinks.json",
+      "destination_sha256": "580842d49d67b3dba1245dd6ec7537934290ac60cab77d17811a40d2c63887ed",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "580842d49d67b3dba1245dd6ec7537934290ac60cab77d17811a40d2c63887ed",
+      "source": "references/data/sinks.json"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/enums.md",
+      "destination_sha256": "3d6c1ccfcac6dce1e6e053dd38428f296c9db04f338211677aa2f22c6e25ef45",
+      "reason": "Adapted for public distribution.",
+      "sha256": "30e629de7388f81618ad4fd69254f004fbc53c9e2151058acc48ca649b587b9c",
+      "source": "references/enums.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/hook-setup.md",
+      "destination_sha256": "ae0a1364a1cf98ca541e58874d22fd1517183c91be3be6e3189543ecd10a5db0",
+      "reason": "Adapted for public distribution.",
+      "sha256": "6675ff8c3576d3193ee58f194c297fe01788523fc11fb2525cf2fad4a457e1b9",
+      "source": "references/hook-setup.md"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/multitenant-p0-doctrine.md",
+      "destination_sha256": "efcac17cd20560ae913b876404c10611f3a30b3a959600e532c39b5295536fe1",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/organization_context/README.md",
+      "destination_sha256": "2d5b8e2d3756a0d1b3fc198a490a8d2a707a3187ca3c5bce72d43e028e00e7ba",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/organization_context/_graph.json",
+      "destination_sha256": "bec4a37484233a29dec8e9a6b60d7a343967937324710dd79741123ed8a34fd9",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "references/organization_context/schema.json",
+      "destination_sha256": "67762319f3fc2707a0ae5810d07c7e37962be5cf53b3437398249b60c447552e",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/pattern-tags.md",
+      "destination_sha256": "2605ba80b584876dc5919aef3f81ca87ea1501491452e35b5322d6644c4e6562",
+      "reason": "Adapted for public distribution.",
+      "sha256": "eb4fdb398c809a0ebfa6a7ce53ef99b22e4f04d6dd152404b5b09eaae5ea1fab",
+      "source": "references/pattern-tags.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/pattern-validation-table.md",
+      "destination_sha256": "aa6113333b1debbb48c985d26f776db9b57cf3a42317ee92d510d87100366dd4",
+      "reason": "Adapted for public distribution.",
+      "sha256": "1d9ffea63cced8d2ffd914f82cd52dda93bd66ae6c4aee9114f2cc56f1a9ea92",
+      "source": "references/pattern-validation-table.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/report-contract.md",
+      "destination_sha256": "3ed7bb1e4e1ed4441c76be70e63083beeafd07b0ebaf4cbec31976b63cd8cfc5",
+      "reason": "Adapted for public distribution.",
+      "sha256": "c4aeda38fb7605f72a43fda1bef84ec9fdebfaba700b7d3f6110f3df8f283d1f",
+      "source": "references/report-contract.md"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "references/state-schema.md",
+      "destination_sha256": "a73b89dab91fca8c39c549c4861ead67dd6a9a8c9196693aae459e98813ff86b",
+      "reason": "Adapted for public distribution.",
+      "sha256": "38b68fc8eef43d9eea36d11f5b7fc6cab06b1b0c8a3ec28c9b0202d16f982210",
+      "source": "references/state-schema.md"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/.gitkeep",
+      "destination_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "source": "scripts/.gitkeep"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/CVSS-LICENSE",
+      "destination_sha256": "9d7fbe21f9676e34e0f58529398aad87bfb5416fcb48ef723a5fc9eabc1f405d",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "9d7fbe21f9676e34e0f58529398aad87bfb5416fcb48ef723a5fc9eabc1f405d",
+      "source": "scripts/CVSS-LICENSE"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/agent-journal.py",
+      "destination_sha256": "26cc912c7d961a32c6561763569885fccf4fe4b54c10fa095343dcd292b9299e",
+      "reason": "Adapted for public distribution.",
+      "sha256": "58ab0d882e9698908a355ffa493fff5a4005e5438b4dc5b5b017c2eade991c46",
+      "source": "scripts/agent-journal.py"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "scripts/build-context-graph.py",
+      "destination_sha256": "d44ce84e7a88f4fec1cc9e0b2dfbb82a4d6860c85e9438b3bfd3c058b8e410f2",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/callgraph/build-callgraph.py",
+      "destination_sha256": "d20dfe1855dddcb6979751306ebd561b5198e2c008bd440b020c968ebdb8577e",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "d20dfe1855dddcb6979751306ebd561b5198e2c008bd440b020c968ebdb8577e",
+      "source": "scripts/callgraph/build-callgraph.py"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/callgraph/queries/go-calls.scm",
+      "destination_sha256": "14a9afb394a63566c7904b8245c908d93647e8812989284af08084fa159e1c3f",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "14a9afb394a63566c7904b8245c908d93647e8812989284af08084fa159e1c3f",
+      "source": "scripts/callgraph/queries/go-calls.scm"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/callgraph/queries/java-calls.scm",
+      "destination_sha256": "1d6f4d921c5b980dcec971fa6e33c754f096ed2b5ea9fca49f57408d5778f58f",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "1d6f4d921c5b980dcec971fa6e33c754f096ed2b5ea9fca49f57408d5778f58f",
+      "source": "scripts/callgraph/queries/java-calls.scm"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/callgraph/queries/javascript-calls.scm",
+      "destination_sha256": "cb232b80eb32025a244755d492b43f8fffb9dd814e66e30ded33d47aa2a0ae2d",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "cb232b80eb32025a244755d492b43f8fffb9dd814e66e30ded33d47aa2a0ae2d",
+      "source": "scripts/callgraph/queries/javascript-calls.scm"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/callgraph/queries/python-calls.scm",
+      "destination_sha256": "2ae488c7712ebe5d26f143e9d10a6ea5f3f6ed1b4fc81fddcb5bb8959218ebb8",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "2ae488c7712ebe5d26f143e9d10a6ea5f3f6ed1b4fc81fddcb5bb8959218ebb8",
+      "source": "scripts/callgraph/queries/python-calls.scm"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/check-gate.sh",
+      "destination_sha256": "710fc7b94f65c2106daa78561afed3f859cfb9d330119e3d24e553ffebb118e8",
+      "reason": "Adapted for public distribution.",
+      "sha256": "4d0d22306a1688e0fe10806034a94e1792c053f460174763a04dbe1b5af33eab",
+      "source": "scripts/check-gate.sh"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/complete-phase.sh",
+      "destination_sha256": "d895d7ace8497c8fc9209ad2bf33280b3830ad35da0ea7c06a96ccfd6fddc1af",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "d895d7ace8497c8fc9209ad2bf33280b3830ad35da0ea7c06a96ccfd6fddc1af",
+      "source": "scripts/complete-phase.sh"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/cvss_v4.py",
+      "destination_sha256": "0c0139ae188ba2f18adedeeb89b6e5726554c5b500ade3e483f1647f8a2c51eb",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "0c0139ae188ba2f18adedeeb89b6e5726554c5b500ade3e483f1647f8a2c51eb",
+      "source": "scripts/cvss_v4.py"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "scripts/dependency-inventory.py",
+      "destination_sha256": "bdd3b5bc8a3b7c3e476cd1bf2cba5287dbc4c8f55af94e863bc6c310247eca18",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/init-review.sh",
+      "destination_sha256": "2e3af321fa15517d7443885c12f1b0a9b03792219fde22743a1b6afbdbd0204f",
+      "reason": "Adapted for public distribution.",
+      "sha256": "48670f45439c5e5011ae7852e85815c1d59df76299b192423a8f12dbf62c6ca5",
+      "source": "scripts/init-review.sh"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "scripts/normalize-multitenant-scope.py",
+      "destination_sha256": "4110da80dd31db7aa73eb27ae795e15984a253e08270be5482f02c8445129846",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/preflight.py",
+      "destination_sha256": "0470cb33154d00b17eea5992275e0cfa4d369a8f62a34ec4dc40fce98b378757",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "0470cb33154d00b17eea5992275e0cfa4d369a8f62a34ec4dc40fce98b378757",
+      "source": "scripts/preflight.py"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "scripts/reconcile-topology.py",
+      "destination_sha256": "560d6cf096fab74a8b2e5551cc88d2caa79a68d5cf2262a2c5dca41df415b7e8",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/report/build-executive.py",
+      "destination_sha256": "9e6b72570e6725345351b815610135a7f2b0c88d0b325bb235ed926e3cbe723a",
+      "reason": "Adapted for public distribution.",
+      "sha256": "7766892ced7bf14ad9708557bb12533539915c36ca8e00ac07d5bceab2262ae0",
+      "source": "scripts/report/build-executive.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/report/build-markdown.py",
+      "destination_sha256": "c1a846d3e95ddb60d9f966d142878a3e359e972dbf856cc680261f92120e196c",
+      "reason": "Adapted for public distribution.",
+      "sha256": "62e7a0a706c570f7e2672d97c5bcea26822561037ee65170240d88cedf7d8ff4",
+      "source": "scripts/report/build-markdown.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/report/build-sarif.py",
+      "destination_sha256": "922cf1dc7a6d49ad72d1042dcaf3359b0bd114f4ea2210f123014e59864e3dc9",
+      "reason": "Adapted for public distribution.",
+      "sha256": "0aaceef7fef624e07afca70827ba7892c505477c7cc6f76b4be93038cedcf012",
+      "source": "scripts/report/build-sarif.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/report/build.py",
+      "destination_sha256": "376e04a6a5d2bea54a6c485be30ef6d17a4897f09900692b36e65677c39f9e7b",
+      "reason": "Adapted for public distribution.",
+      "sha256": "a1dea5027a9004840cc649c6b6a50a7b3e417c0c17fe3bec21c349cc0ae166ed",
+      "source": "scripts/report/build.py"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/report/template.html",
+      "destination_sha256": "2f4435fe08bfb73fbd2b03b44ec36e8dd809648f2eb2c258f943ac847ed06dcc",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "2f4435fe08bfb73fbd2b03b44ec36e8dd809648f2eb2c258f943ac847ed06dcc",
+      "source": "scripts/report/template.html"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "scripts/state-utils.sh",
+      "destination_sha256": "58c4d33625183ef0c57ea40cde5b6fa825f4d48696b0b90f441384ec6f6c64bf",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "58c4d33625183ef0c57ea40cde5b6fa825f4d48696b0b90f441384ec6f6c64bf",
+      "source": "scripts/state-utils.sh"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "scripts/sync-organization-context.sh",
+      "destination_sha256": "8840cab55e5fa0ad517d4d6c96edbca15f1bb3e6a22c9c08ca7da441bc03bc4f",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/validate-findings.py",
+      "destination_sha256": "a0156a22a033b4b51e4033e40b87210120489b6dd62a180011f75082f93a3899",
+      "reason": "Adapted for public distribution.",
+      "sha256": "3930f51ac9155ee90c37e4dd897c0fedc976bbea0fb8b7377b75ed8066c86423",
+      "source": "scripts/validate-findings.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "scripts/validate-phase.sh",
+      "destination_sha256": "c50fd38a620621e35f7d4b5a12f955fef14ee1b59406b79f6e106f0709c4410a",
+      "reason": "Adapted for public distribution.",
+      "sha256": "13d160978a6487ab8ebf8f9b23734a455c2f896bc7e050da39c2146dce14c70c",
+      "source": "scripts/validate-phase.sh"
+    },
+    {
+      "classification": "PUBLIC_ADDITION",
+      "destination": "scripts/workspace-compat.py",
+      "destination_sha256": "01537f990babb99242b5699f4f2fa8d2213f2769d6b133a1dd1e3cda839b807e",
+      "reason": "Added by public migration; no private-source file is claimed.",
+      "sha256": null,
+      "source": null
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "skills/.gitkeep",
+      "destination_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "source": "skills/.gitkeep"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "skills/nightfalcon/SKILL.md",
+      "destination_sha256": "5dedbc608f2685e686d90cbf94a0ff974d18e50a6e0c4e85aa800cfdeb096caf",
+      "reason": "Adapted for public distribution.",
+      "sha256": "7a28954eda04d200ad33aaa4b0003237eb3211b137eaa30ada9b31d3c30ae0ce",
+      "source": "skills/nightfalcon/SKILL.md"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "tests/fixtures/executive-summary.json",
+      "destination_sha256": "8a13168b9b899eec3b090606f5d92e7283d8b2ffa6af11bae9a61ad46c0bb7db",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "8a13168b9b899eec3b090606f5d92e7283d8b2ffa6af11bae9a61ad46c0bb7db",
+      "source": "tests/fixtures/executive-summary.json"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "tests/test_gates.py",
+      "destination_sha256": "50d07d3b588ec8df9b913a47235efa2eaad8e9337a860427db38a8eec5f0f61e",
+      "reason": "Adapted for public distribution.",
+      "sha256": "4246833d095e6eb36ad8280bdfb237086c16e0b592c8844efbf6236b7df3de0c",
+      "source": "tests/test_gates.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "tests/test_hook.py",
+      "destination_sha256": "dcf2b77fedd55b919005b10218e0ad356353b6541d60f32b9036dfb329bc784b",
+      "reason": "Adapted for public distribution.",
+      "sha256": "965d49b42775fd299b10f4dcfcede9d74ab7307b26f094743a88234124d6447f",
+      "source": "tests/test_hook.py"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "tests/test_preflight.py",
+      "destination_sha256": "e6fa67ef4d95da2482e92033f2f7c96a552057ecfe4a6064f63fc0193d99e3ec",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "e6fa67ef4d95da2482e92033f2f7c96a552057ecfe4a6064f63fc0193d99e3ec",
+      "source": "tests/test_preflight.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "tests/test_prompts.py",
+      "destination_sha256": "d1540277385cb14eb4dae860c13532b9c00d7ca7bbcf383bca5fcaba6c4c8120",
+      "reason": "Adapted for public distribution.",
+      "sha256": "d6ec3bba9b77fcd1731dcf0d72ae316310728d06906fb4b51ea8867dcee15069",
+      "source": "tests/test_prompts.py"
+    },
+    {
+      "classification": "UNCHANGED",
+      "destination": "tests/test_report.py",
+      "destination_sha256": "c35c826e5bc5018c4dd1ab84350cd1f4f328a3445ab0deafcfbc2acbfdb233d7",
+      "reason": "Copied byte-for-byte.",
+      "sha256": "c35c826e5bc5018c4dd1ab84350cd1f4f328a3445ab0deafcfbc2acbfdb233d7",
+      "source": "tests/test_report.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "tests/test_runtime_scripts.py",
+      "destination_sha256": "ba506e7f2ad7f66fff26b555f9f739445372e33d24fee1766e415025d17b09d5",
+      "reason": "Adapted for public distribution.",
+      "sha256": "100f32c17bd53c84d0071228226fe5b759921cbd06ea236aa769573e5c8ffe40",
+      "source": "tests/test_runtime_scripts.py"
+    },
+    {
+      "classification": "ADAPTED",
+      "destination": "tests/test_sarif.py",
+      "destination_sha256": "481e440f902fc5290771e481591e16307dbe21d27baade3613915ec9d75b9a5b",
+      "reason": "Adapted for public distribution.",
+      "sha256": "7308b49abdaf77b36c3d7535815de2c37002dd28ac4583e90b3b0d2c8067c1f6",
+      "source": "tests/test_sarif.py"
+    }
+  ],
+  "schema_version": "2",
+  "source_excluded_file_count": 1301,
+  "source_excluded_sha256": "e215fccafee85bdff3818b6787659bb1f238b1496e8b7b080d3db5d46892f361",
+  "source_included_file_count": 62,
+  "source_revision": "0c3183e02ec1f1500115233402cabdf7808ec4e6",
+  "source_runtime_file_count": 1363
+}

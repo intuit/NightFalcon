@@ -1,0 +1,26 @@
+[package]
+name = "nightfalcon"
+version = "3.0.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Multi-client agentic security review harness"
+repository = "https://github.com/intuit/nightfalcon"
+homepage = "https://github.com/intuit/nightfalcon"
+readme = "README.md"
+build = "packaging/cargo/build.rs"
+include = [
+  "Cargo.toml",
+  "VERSION",
+  "LICENSE",
+  "NOTICE",
+  "src/nightfalcon/**",
+  "claude/**",
+  "codex/**",
+  "cursor/**",
+  "packaging/runtime-executables.txt",
+  "packaging/cargo/**"
+]
+
+[[bin]]
+name = "nightfalcon"
+path = "packaging/cargo/src/main.rs"

@@ -1,0 +1,53 @@
+{
+  "_comment": "Curated list of dangerous function/method names per language. Phase 2 uses these to query the tree-sitter call graph for 'who calls this sink?'. Name-based — the LLM disambiguates which library/class the call resolves to.",
+  "java": {
+    "sql_injection":      ["executeQuery", "executeUpdate", "execute", "prepareStatement", "createNativeQuery", "createQuery"],
+    "command_injection":  ["exec", "start", "command", "getRuntime"],
+    "deserialization":    ["readObject", "fromXML", "fromString", "readValue", "deserialize"],
+    "ssrf":               ["openConnection", "openStream", "newCall", "exchange", "getForObject", "postForObject"],
+    "path_traversal":     ["resolve", "toFile", "newInputStream", "newOutputStream", "newBufferedReader"],
+    "xss_template":       ["setAttribute", "addObject", "include"],
+    "weak_crypto":        ["getInstance", "MD5", "SHA1", "DES", "RC4"],
+    "redirect":           ["sendRedirect", "setHeader"],
+    "logging":            ["info", "warn", "error", "debug", "trace"]
+  },
+  "javascript": {
+    "sql_injection":      ["query", "execute", "raw"],
+    "command_injection":  ["exec", "execSync", "spawn", "spawnSync", "execFile"],
+    "code_eval":          ["eval", "Function", "vm"],
+    "deserialization":    ["parse", "unserialize"],
+    "ssrf":               ["request", "fetch", "get", "post", "axios"],
+    "path_traversal":     ["readFile", "readFileSync", "writeFile", "writeFileSync", "createReadStream", "createWriteStream"],
+    "xss":                ["innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "dangerouslySetInnerHTML"],
+    "redirect":           ["redirect", "location"],
+    "prototype_pollution":["assign", "merge", "extend", "set"]
+  },
+  "python": {
+    "sql_injection":      ["execute", "executemany", "executescript", "raw"],
+    "command_injection":  ["run", "call", "check_call", "check_output", "Popen", "system", "popen", "spawnl", "spawnv"],
+    "code_eval":          ["eval", "exec", "compile"],
+    "deserialization":    ["load", "loads", "Unpickler", "load_all"],
+    "ssrf":               ["urlopen", "get", "post", "request", "Session"],
+    "path_traversal":     ["open", "read", "write", "send_file", "send_from_directory"],
+    "ssti":               ["render_template_string", "Template", "from_string"],
+    "redirect":           ["redirect", "url_for"],
+    "xxe":                ["parse", "parseString", "fromstring"]
+  },
+  "go": {
+    "sql_injection":      ["Query", "QueryRow", "QueryRowContext", "QueryContext", "Exec", "ExecContext", "Prepare", "Raw"],
+    "command_injection":  ["Command", "CommandContext", "Run", "Start", "Output", "CombinedOutput"],
+    "deserialization":    ["Unmarshal", "Decode", "NewDecoder"],
+    "ssrf":               ["Get", "Post", "Do", "NewRequest"],
+    "path_traversal":     ["Open", "OpenFile", "ReadFile", "WriteFile", "Create"],
+    "xss_template":       ["HTML", "JS", "URL"],
+    "weak_crypto":        ["New", "Sum"],
+    "redirect":           ["Redirect"]
+  },
+  "framework_entry_points": {
+    "_comment": "Function/decorator/annotation names that mark externally-reachable entry points. Phase 1 uses these to expand the attack surface.",
+    "java":       ["RequestMapping", "GetMapping", "PostMapping", "PutMapping", "DeleteMapping", "PatchMapping", "Path", "GET", "POST", "PUT", "DELETE", "RestController", "Controller", "WebServlet", "ServerEndpoint"],
+    "javascript": ["get", "post", "put", "delete", "patch", "use", "route", "router", "Controller", "Get", "Post", "Put", "Delete", "Patch", "Sub", "Pub"],
+    "python":     ["route", "get", "post", "put", "delete", "patch", "api_view", "view_config", "url"],
+    "go":         ["HandleFunc", "Handle", "GET", "POST", "PUT", "DELETE", "PATCH", "Group", "Use", "ListenAndServe"]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "nightfalcon",
+  "version": "3.0.0",
+  "description": "Multi-client agentic security review harness",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intuit/nightfalcon.git"
+  },
+  "homepage": "https://github.com/intuit/nightfalcon",
+  "bugs": "https://github.com/intuit/nightfalcon/issues",
+  "bin": {
+    "nightfalcon": "packaging/npm/bin/nightfalcon.js"
+  },
+  "files": [
+    "src/nightfalcon/",
+    "claude/",
+    "codex/",
+    "cursor/",
+    "packaging/npm/bin/",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "VERSION",
+    "!**/__pycache__/**",
+    "!**/*.py[cod]",
+    "!**/output/**",
+    "!**/.pytest_cache/**"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["security", "agentic", "review", "cli"]
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "2",
+  "generated_at": "2026-08-26",
+  "generated_from": "owasp-provenance.json@2026-08-26",
+  "frameworks": [
+    {"id":"web-2025","title":"OWASP Top 10 2025","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["access control","security misconfiguration","software supply chain","cryptography","injection","insecure design","authentication","integrity","logging","exception handling"]},
+    {"id":"api-2023","title":"OWASP API Security Top 10 2023","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["object authorization","property authorization","function authorization","resource consumption","sensitive business flow","SSRF","inventory","unsafe API consumption"]},
+    {"id":"mobile-2024","title":"OWASP Mobile Top 10 2024","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["credentials","mobile supply chain","authentication","validation","communication","privacy","binary protection","configuration","storage","cryptography"]},
+    {"id":"llm-2026","title":"OWASP Top 10 for LLM Applications 2026","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["prompt injection","sensitive disclosure","excessive agency","supply chain","poisoning","consumption","misinformation","hidden context","vector embedding","output handling"]},
+    {"id":"agentic-2026","title":"OWASP Top 10 for Agentic Applications 2026","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["goal hijack","tool misuse","identity abuse","agentic supply chain","code execution","memory poisoning","inter-agent communication","cascading failure","human-agent trust","rogue agent"]},
+    {"id":"kubernetes-2025","title":"OWASP Kubernetes Top 10 2025","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["workload","RBAC","secrets","network segmentation","admission","supply chain","cluster components"]},
+    {"id":"mcp-2025-beta","title":"OWASP MCP Top 10 2025 beta","note_path":"references/OWASP/OWASP_Cloud_Agentic_and_Identity.md","pattern_class_hints":[]},
+    {"id":"nhi-2025","title":"OWASP Non-Human Identities Top 10 2025","note_path":"references/OWASP/OWASP_Cloud_Agentic_and_Identity.md","pattern_class_hints":["service identity","secret lifecycle","credential isolation","rotation","overprivilege"]},
+    {"id":"smart-contract-2026","title":"OWASP Smart Contract Top 10 2026","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["on-chain authorization","business logic","oracle","upgradeability","reentrancy","economics"]},
+    {"id":"business-logic-abuse-2025","title":"OWASP Business Logic Abuse Top 10 2025","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["action limit","concurrency","state manipulation","loop","artifact lifetime","transition validation","quota","state disclosure","access control","shadow function"]},
+    {"id":"oss-current","title":"OWASP Open Source Software Top 10","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["known vulnerability","compromised package","name confusion","maintenance","outdated dependency","untracked dependency","license","maturity","mutable dependency","dependency size"]},
+    {"id":"agentic-skills-draft","title":"OWASP Agentic Skills Top 10 public-review draft","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["skill packaging","skill execution","instruction integrity"]},
+    {"id":"asvs-5.0.0","title":"OWASP ASVS 5.0.0","note_path":"references/OWASP/OWASP_ASVS_5.0.0.md","pattern_class_hints":["architecture","authentication","session","access control","validation","cryptography","logging","data protection","communications","configuration"]},
+    {"id":"cicd-2022","title":"OWASP CI/CD Security Risks 1.0","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["pipeline identity","workflow execution","artifact integrity","dependency chain"]},
+    {"id":"desktop-2021","title":"OWASP Desktop App Security Top 10 2021","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["local trust boundary","update integrity","credential storage","IPC"]},
+    {"id":"serverless-2017","title":"OWASP Serverless Top 10","note_path":"references/OWASP/OWASP Framework Index.md","pattern_class_hints":["event injection","function permissions","configuration","dependency","logging"]}
+  ],
+  "system_kind_index": {
+    "cross_domain": ["web-2025","business-logic-abuse-2025","oss-current","asvs-5.0.0"],
+    "web": ["web-2025","api-2023"],
+    "api": ["api-2023","business-logic-abuse-2025"],
+    "mobile": ["mobile-2024"],
+    "llm": ["llm-2026"],
+    "agentic": ["agentic-2026","agentic-skills-draft"],
+    "mcp": ["mcp-2025-beta"],
+    "cloud_native": ["kubernetes-2025","nhi-2025"],
+    "smart_contract": ["smart-contract-2026"],
+    "cicd": ["cicd-2022"],
+    "desktop": ["desktop-2021"],
+    "serverless": ["serverless-2017"]
+  },
+  "fingerprint_index": {
+    "openapi": ["api"], "swagger": ["api"], "router": ["web","api"],
+    "android": ["mobile"], "ios": ["mobile"], "langchain": ["llm","agentic"],
+    "openai": ["llm"], "mcp": ["mcp","agentic"], "kubernetes": ["cloud_native"],
+    "Dockerfile": ["cloud_native"], "terraform": ["cloud_native"],
+    "solidity": ["smart_contract"], ".github/workflows": ["cicd"],
+    "electron": ["desktop"], "serverless.yml": ["serverless"]
+  },
+  "nodes": [
+    {"id":"WEB-A01-2025","framework":"web","title":"Broken Access Control","links":["API-1-2023","BLA9-2025"]},
+    {"id":"WEB-A03-2025","framework":"web","title":"Software Supply Chain Failures","links":["OSS-RISK1","OSS-RISK2","ASI04-2026"]},
+    {"id":"API-1-2023","framework":"api","title":"Broken Object Level Authorization","links":["WEB-A01-2025","BLA9-2025"]},
+    {"id":"API-6-2023","framework":"api","title":"Sensitive Business Flows","links":["BLA1-2025","BLA2-2025","BLA6-2025"]},
+    {"id":"BLA2-2025","framework":"business-logic-abuse","title":"Concurrent Workflow Order Bypass","links":["API-6-2023","SC02-2026"]},
+    {"id":"LLM03-2026","framework":"llm","title":"Excessive Agency","links":["ASI02-2026","ASI03-2026"]},
+    {"id":"ASI07-2026","framework":"agentic","title":"Insecure Inter-Agent Communication","links":["MCP07-2025","MCP10-2025"]}
+  ]
+}

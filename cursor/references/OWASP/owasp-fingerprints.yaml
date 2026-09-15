@@ -1,0 +1,27 @@
+web-2025:
+  - access control
+  - security misconfiguration
+  - software supply chain
+api-2023:
+  - object authorization
+  - property authorization
+  - sensitive business flow
+business-logic-abuse-2025:
+  - invariant
+  - idempotency
+  - replay
+  - race condition
+  - state transition
+oss-current:
+  - dependency
+  - lockfile
+  - package provenance
+  - optional dependency
+agentic-2026:
+  - tool invocation
+  - agent memory
+  - inter-agent
+llm-2026:
+  - prompt injection
+  - hidden context
+  - vector embedding

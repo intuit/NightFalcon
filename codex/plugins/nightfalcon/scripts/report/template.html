@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{REPORT_TITLE}}</title>
+<style>
+  /* ------------------------------------------------------------------
+     Color palette — Carbon-inspired neutrals + WCAG AA semantic tiers.
+     Every text color pairs with its surface at ≥4.5:1 contrast on body
+     copy and ≥3:1 on large / icon text. Severity follows the
+     cross-industry convention: red = danger, purple = severe, orange =
+     warning, amber = caution, blue = info, green = safe.
+     ------------------------------------------------------------------ */
+  :root {
+    --bg:        #f4f6fa;
+    --surface:   #ffffff;
+    --surface-2: #f8fafc;
+    --surface-3: #f1f4f9;
+    --text:      #1f2937;
+    --text-2:    #475569;
+    --text-3:    #64748b;
+    --border:    #e2e8f0;
+    --border-2:  #cbd5e1;
+    --accent:    #2563eb;
+    --accent-2:  #1d4ed8;
+    --link:      #1d4ed8;
+
+    --p0-text:    #7f1d1d; --p0-tint:    #fef2f2; --p0-strong:    #dc2626; --p0-border:    #fecaca;
+    --p1-text:    #7e22ce; --p1-tint:    #faf5ff; --p1-strong:    #9333ea; --p1-border:    #e9d5ff;
+    --p2-text:    #9a3412; --p2-tint:    #fff7ed; --p2-strong:    #ea580c; --p2-border:    #fed7aa;
+    --p3-text:    #854d0e; --p3-tint:    #fefce8; --p3-strong:    #ca8a04; --p3-border:    #fde68a;
+    --p4-text:    #1e40af; --p4-tint:    #eff6ff; --p4-strong:    #2563eb; --p4-border:    #bfdbfe;
+    --clean-text: #166534; --clean-tint: #f0fdf4; --clean-strong: #16a34a; --clean-border: #bbf7d0;
+
+    --code-bg:     #f8fafc;
+    --code-border: #e2e8f0;
+    --code-text:   #0f172a;
+    --shadow-sm:   0 1px 2px rgba(15,23,42,0.06), 0 1px 1px rgba(15,23,42,0.04);
+    --shadow-md:   0 4px 12px rgba(15,23,42,0.08), 0 2px 4px rgba(15,23,42,0.05);
+    --shadow-lg:   0 20px 40px rgba(15,23,42,0.12), 0 8px 16px rgba(15,23,42,0.08);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #f8fafc;
+    padding: 40px 0 32px;
+  }
+  header.hero h1 { margin: 0 0 8px; font-size: 26px; font-weight: 600; letter-spacing: -0.5px; }
+  header.hero .subtitle { color: #94a3b8; font-size: 14px; margin-bottom: 20px; }
+  header.hero .badges { display: flex; gap: 10px; flex-wrap: wrap; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; background: rgba(248,250,252,0.08); border: 1px solid rgba(248,250,252,0.16); color: #e2e8f0; }
+  .badge .num { font-size: 15px; font-weight: 700; color: #f8fafc; }
+  .badge.p0     .num { color: #fecaca; } .badge.p0     { border-color: rgba(220,38,38,0.4); }
+  .badge.p1     .num { color: #e9d5ff; } .badge.p1     { border-color: rgba(147,51,234,0.4); }
+  .badge.p2     .num { color: #fed7aa; } .badge.p2     { border-color: rgba(234,88,12,0.4); }
+  .badge.p3     .num { color: #fde68a; } .badge.p3     { border-color: rgba(202,138,4,0.4); }
+  .badge.p4     .num { color: #bfdbfe; } .badge.p4     { border-color: rgba(37,99,235,0.4); }
+  .badge.clean  .num { color: #bbf7d0; } .badge.clean  { border-color: rgba(22,163,74,0.4); }
+
+  main { padding: 32px 0 64px; }
+
+  nav.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  .tab-btn { background: transparent; border: none; padding: 12px 18px; cursor: pointer; font-size: 14px; font-weight: 500; color: var(--text-2); border-bottom: 2px solid transparent; font-family: inherit; }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--text); }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .summary { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 32px; box-shadow: var(--shadow-sm); }
+  .summary h2 { font-size: 18px; margin: 24px 0 12px; color: var(--text); }
+  .summary h2:first-child { margin-top: 0; }
+  .summary h3 { font-size: 15px; margin: 16px 0 8px; color: var(--text); }
+  .summary p { margin: 0 0 14px; color: var(--text); }
+  .summary code { background: var(--code-bg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: 13px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--code-text); }
+  .summary strong.tier-p0 { color: var(--p0-text); }
+  .summary strong.tier-p1 { color: var(--p1-text); }
+  .summary strong.tier-p2 { color: var(--p2-text); }
+  .summary strong.tier-p3 { color: var(--p3-text); }
+  .summary strong.tier-p4 { color: var(--p4-text); }
+  .summary ul, .summary ol { margin: 0 0 14px; padding-left: 24px; }
+  .summary li { margin-bottom: 6px; }
+
+  /* validation-corrections callout (I.6) */
+  .callout {
+    background: var(--surface-2);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .callout h3 { margin: 0 0 8px; color: var(--accent-2); font-size: 14px; text-transform: uppercase; letter-spacing: 0.6px; }
+  .callout ul { margin: 0; padding-left: 20px; }
+  .callout li { margin-bottom: 6px; font-size: 14px; }
+
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 16px; align-items: center; flex-wrap: wrap; }
+  .filter-bar input { flex: 1; min-width: 220px; padding: 9px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; background: var(--surface); }
+  .tier-filter { background: var(--surface); border: 1px solid var(--border); padding: 7px 14px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--text-2); font-family: inherit; }
+  .tier-filter:hover { background: var(--surface-3); }
+  .tier-filter.active { background: var(--text); color: var(--surface); border-color: var(--text); }
+
+  .repo-grid { display: flex; flex-direction: column; gap: 8px; }
+  .repo-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 16px;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    cursor: pointer;
+    transition: box-shadow 120ms ease, border-color 120ms ease, transform 120ms ease;
+  }
+  .repo-row:hover { box-shadow: var(--shadow-md); border-color: var(--border-2); transform: translateY(-1px); }
+  .repo-row .name { font-weight: 600; color: var(--text); margin-bottom: 4px; font-size: 15px; }
+  .repo-row .note { color: var(--text-3); font-size: 13px; line-height: 1.5; }
+
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; }
+  .pill.p0    { color: var(--p0-text);    background: var(--p0-tint);    border: 1px solid var(--p0-border); }
+  .pill.p1    { color: var(--p1-text);    background: var(--p1-tint);    border: 1px solid var(--p1-border); }
+  .pill.p2    { color: var(--p2-text);    background: var(--p2-tint);    border: 1px solid var(--p2-border); }
+  .pill.p3    { color: var(--p3-text);    background: var(--p3-tint);    border: 1px solid var(--p3-border); }
+  .pill.p4    { color: var(--p4-text);    background: var(--p4-tint);    border: 1px solid var(--p4-border); }
+  .pill.clean { color: var(--clean-text); background: var(--clean-tint); border: 1px solid var(--clean-border); }
+
+  /* Exposure badge (enums.md §17): EXTERNAL / INTERNAL / INTERNAL-RESTRICTED */
+  .exposure-badge { display: inline-block; padding: 3px 10px; border-radius: 6px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px; margin-left: 6px; }
+  .exposure-external            { color: var(--p1-text); background: var(--p1-tint);    border: 1px solid var(--p1-border); }
+  .exposure-internal            { color: var(--text-2); background: var(--surface-3);   border: 1px solid var(--border); }
+  .exposure-internal-restricted { color: var(--p3-text); background: var(--p3-tint);    border: 1px solid var(--p3-border); }
+  .exposure-line { font-size: 14px; margin: 0 0 8px 0; }
+
+  /* CVSS v4.0 Base line: score + vector + calculator link + optional CWE tag */
+  .cvss-line { font-size: 14px; margin: 0 0 8px 0; }
+  .cvss-line code { background: var(--code-bg); border: 1px solid var(--code-border);
+    border-radius: 4px; padding: 1px 6px; font-size: 12px; }
+  .cvss-line a { color: var(--link); text-decoration: none; }
+  .cvss-line a:hover { text-decoration: underline; }
+  .cwe-tag, .cve-tag { display: inline-block; padding: 2px 8px; border-radius: 6px;
+    font-size: 11px; font-weight: 700; color: var(--text-2);
+    background: var(--surface-3); border: 1px solid var(--border); }
+
+  /* Structured per-finding metadata rows (reachability / exploitability / etc.) */
+  .meta-row { font-size: 14px; margin: 0 0 6px 0; }
+  /* Repo provenance line (repo URL + commit sha) at the top of a repo modal */
+  .repo-meta { font-size: 13px; color: var(--text-3); margin: 0 0 16px 0; }
+  .repo-meta a { color: var(--link); text-decoration: none; }
+  .repo-meta a:hover { text-decoration: underline; }
+  .repo-meta code { background: var(--code-bg); border: 1px solid var(--code-border);
+    border-radius: 4px; padding: 1px 6px; font-size: 12px; }
+
+  .count-cluster { display: flex; gap: 6px; flex-wrap: nowrap; }
+  .c { font-size: 11px; padding: 3px 8px; border-radius: 4px; background: var(--surface-3); color: var(--text-3); font-weight: 600; }
+  .c.on.p0    { background: var(--p0-tint);    color: var(--p0-text); }
+  .c.on.p1    { background: var(--p1-tint);    color: var(--p1-text); }
+  .c.on.p2    { background: var(--p2-tint);    color: var(--p2-text); }
+  .c.on.p3    { background: var(--p3-tint);    color: var(--p3-text); }
+  .c.on.p4    { background: var(--p4-tint);    color: var(--p4-text); }
+
+  /* Findings tab — flat per-repo list (pill + id + short title) */
+  .findings-group { margin-bottom: 28px; }
+  .findings-group-title { font-size: 16px; margin: 0 0 12px; display: flex; align-items: baseline; gap: 10px; }
+  .findings-group-count { font-size: 12px; font-weight: 600; color: var(--text-3); }
+  .findings-list { display: flex; flex-direction: column; gap: 6px; }
+  .finding-row { display: grid; grid-template-columns: auto auto 1fr; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; cursor: pointer; transition: box-shadow 120ms ease, border-color 120ms ease; }
+  .finding-row:hover { box-shadow: var(--shadow-sm); border-color: var(--border-2); }
+  .finding-row .frow-id { font-size: 12px; font-weight: 700; color: var(--text-3); font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .finding-row .frow-title { font-size: 14px; color: var(--text); }
+
+  .overlay {
+    position: fixed; inset: 0;
+    background: rgba(15,23,42,0.65);
+    display: none; align-items: flex-start; justify-content: center;
+    padding: 40px 20px;
+    overflow-y: auto;
+    z-index: 100;
+  }
+  .overlay.open { display: flex; }
+  .overlay .modal {
+    background: var(--surface);
+    border-radius: 12px;
+    max-width: 980px;
+    width: 100%;
+    padding: 28px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+  }
+  .overlay h2 { font-size: 20px; margin: 0 0 16px; padding-right: 40px; color: var(--text); }
+  .overlay .close {
+    position: absolute; top: 16px; right: 16px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    width: 32px; height: 32px;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text-2);
+    line-height: 1;
+    font-family: inherit;
+  }
+  .overlay .close:hover { background: var(--surface-3); color: var(--text); }
+  .overlay-toolbar { display: flex; gap: 8px; margin-bottom: 16px; }
+  .overlay-toolbar button { background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; font-size: 12px; font-weight: 600; color: var(--text-2); cursor: pointer; font-family: inherit; }
+  .overlay-toolbar button:hover { background: var(--surface-3); color: var(--text); }
+
+  /* Finding cards inside the overlay — collapsible (expanded by default) */
+  .finding { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 16px; }
+  .finding summary { list-style: none; cursor: pointer; display: flex; gap: 10px; align-items: center; padding: 16px 20px; user-select: none; }
+  .finding summary::-webkit-details-marker { display: none; }
+  .finding summary::before { content: "\25be"; color: var(--text-3); font-size: 12px; width: 14px; display: inline-block; }
+  .finding details:not([open]) summary::before { content: "\25b8"; }
+  .finding summary:hover { background: var(--surface-2); border-radius: 10px 10px 0 0; }
+  .finding details:not([open]) summary:hover { border-radius: 10px; }
+  .finding .finding-title { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.4; }
+  .finding .finding-body { padding: 0 20px 20px; }
+  .finding h4 { font-size: 14px; margin: 16px 0 8px; color: var(--text); }
+  .finding p { margin: 0 0 12px; }
+  .finding p.category, .finding p.location { color: var(--text-2); font-size: 14px; }
+  .finding pre { background: var(--code-bg); border: 1px solid var(--code-border); border-radius: 6px; padding: 12px; overflow-x: auto; font-size: 13px; line-height: 1.5; color: var(--code-text); font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .finding code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .finding p > code { background: var(--code-bg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+  .finding ol, .finding ul { padding-left: 22px; }
+  .finding li { margin-bottom: 4px; }
+  .finding.p0    { border-left: 4px solid var(--p0-strong); }
+  .finding.p1    { border-left: 4px solid var(--p1-strong); }
+  .finding.p2    { border-left: 4px solid var(--p2-strong); }
+  .finding.p3    { border-left: 4px solid var(--p3-strong); }
+  .finding.p4    { border-left: 4px solid var(--p4-strong); }
+
+  /* ── PoC link / requires / skip / dot ────────────────────────────────── */
+  .poc-link code, .poc-requires code { background: var(--code-bg);
+    border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; }
+  .poc-link a, .poc-requires a { color: var(--link); text-decoration: none; }
+  .poc-link a:hover, .poc-requires a:hover { text-decoration: underline; }
+  .poc-type { color: var(--text-3); font-size: 13px; }
+  .poc-verdict { font-weight: 600; }
+  .poc-verdict.ok   { color: var(--clean-strong); }
+  .poc-verdict.warn { color: var(--p2-strong); }
+  .poc-verdict.bad  { color: var(--p0-strong); }
+  .poc-requires { color: var(--text-3); font-size: 13px; margin: -4px 0 12px 0; }
+  .poc-skip { color: var(--text-3); font-size: 14px; }
+  .poc-skip-reason { font-family: ui-monospace, Menlo, monospace;
+    color: var(--p2-strong); }
+  .poc-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--clean-strong); margin-left: 6px; vertical-align: middle; }
+
+  /* ── Executive-summary tab structure ─────────────────────────────────── */
+  /* Headline callout — left border + tinted background = most-severe tier. */
+  .headline-callout { margin: 8px 0 24px; padding: 18px 22px;
+    border-left: 6px solid var(--text-3); background: var(--surface-2);
+    border-radius: 0 8px 8px 0; box-shadow: var(--shadow-sm); }
+  .headline-callout.p0    { border-left-color: var(--p0-strong);    background: var(--p0-tint); }
+  .headline-callout.p1    { border-left-color: var(--p1-strong);    background: var(--p1-tint); }
+  .headline-callout.p2    { border-left-color: var(--p2-strong);    background: var(--p2-tint); }
+  .headline-callout.p3    { border-left-color: var(--p3-strong);    background: var(--p3-tint); }
+  .headline-callout.p4    { border-left-color: var(--p4-strong);    background: var(--p4-tint); }
+  .headline-callout.clean { border-left-color: var(--clean-strong); background: var(--clean-tint); }
+  .hc-eyebrow { font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-3); margin-bottom: 6px; font-weight: 600; }
+  .hc-body p { font-size: 16px; line-height: 1.7; margin: 0; color: var(--text); }
+  .hc-body code { background: var(--surface); border: 1px solid var(--border);
+    padding: 1px 5px; border-radius: 4px; font-size: 0.92em; color: var(--code-text); }
+
+  /* Per-repo summary table */
+  .summary-table { margin: 24px 0; }
+  .summary-table h2 { margin: 0 0 12px; font-size: 18px; }
+  .repo-table { width: 100%; border-collapse: collapse;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .repo-table th, .repo-table td { padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border); }
+  .repo-table th { background: var(--surface-3); font-size: 12px;
+    font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--text-2); }
+  .repo-table tbody tr { cursor: pointer; }
+  .repo-table tbody tr:hover { background: var(--surface-2); }
+  .repo-table tbody tr:last-child td { border-bottom: none; }
+  .repo-table td.rt-slug { font-weight: 600; color: var(--text); }
+  .repo-table td.ct { text-align: center; font-variant-numeric: tabular-nums;
+    font-weight: 600; color: var(--text-3); }
+  .repo-table td.ct.nz.p0 { color: var(--p0-strong); }
+  .repo-table td.ct.nz.p1 { color: var(--p1-strong); }
+  .repo-table td.ct.nz.p2 { color: var(--p2-strong); }
+  .repo-table td.ct.nz.p3 { color: var(--p3-strong); }
+  .repo-table td.ct.nz.p4 { color: var(--p4-strong); }
+  .repo-table td.rt-sev { text-align: center; }
+  .repo-table.aggregate { max-width: 360px; }
+  .repo-table.aggregate tbody tr { cursor: default; }
+  .repo-table.aggregate tbody tr:hover { background: transparent; }
+
+  /* Visible prose sections */
+  .what-we-did, .patterns, .narrative { margin: 28px 0; }
+  .what-we-did h2, .patterns h2, .narrative h2 { margin: 0 0 10px; font-size: 18px; }
+  .pattern-item { padding: 14px 16px; margin: 12px 0;
+    border-left: 3px solid var(--border-2); background: var(--surface-2);
+    border-radius: 0 6px 6px 0; }
+  .pattern-lead { margin: 0 0 6px; }
+  .pattern-lead code { background: var(--code-bg); border: 1px solid var(--code-border);
+    padding: 1px 5px; border-radius: 3px; font-size: 0.92em; }
+  .pattern-item > p:not(.pattern-lead) { margin: 6px 0 0; color: var(--text-2);
+    font-size: 14px; }
+
+  /* PoC summary strip */
+  .poc-strip { margin: 16px 0; padding: 12px 16px; background: var(--surface-3);
+    border: 1px solid var(--border); border-radius: 8px; font-size: 14px;
+    color: var(--text-2); }
+  .poc-strip-count { font-weight: 700; color: var(--text); }
+  .poc-strip a { color: var(--link); text-decoration: none; }
+  .poc-strip a:hover { text-decoration: underline; }
+  .poc-strip code { background: var(--code-bg); border: 1px solid var(--code-border);
+    padding: 1px 5px; border-radius: 3px; }
+  .poc-strip .ok   { color: var(--clean-strong); font-weight: 600; }
+  .poc-strip .warn { color: var(--p2-strong);    font-weight: 600; }
+  .poc-strip .bad  { color: var(--p0-strong);    font-weight: 600; }
+
+  /* Narrative + folded methodology */
+  .narrative { margin-top: 24px; }
+  details.methodology { margin-top: 28px; border-top: 1px solid var(--border);
+    padding-top: 16px; }
+  details.methodology > summary { cursor: pointer; font-weight: 600;
+    color: var(--text-2); list-style: none; padding: 8px 0; }
+  details.methodology > summary:hover { color: var(--text); }
+  details.methodology > summary::before { content: "▸ "; color: var(--text-3); }
+  details.methodology[open] > summary::before { content: "▾ "; }
+
+  footer { padding: 24px 0; text-align: center; color: var(--text-3); font-size: 13px; }
+
+  @media (max-width: 720px) {
+    .repo-row { grid-template-columns: 1fr; }
+    .repo-row .count-cluster { justify-content: flex-start; }
+    header.hero h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>{{REPORT_TITLE}}</h1>
+    <div class="subtitle">{{REPORT_SUBTITLE}}</div>
+    <div class="badges">
+      <span class="badge p0">P0 <span class="num">{{COUNT_P0}}</span></span>
+      <span class="badge p1">P1 <span class="num">{{COUNT_P1}}</span></span>
+      <span class="badge p2">P2 <span class="num">{{COUNT_P2}}</span></span>
+      <span class="badge p3">P3 <span class="num">{{COUNT_P3}}</span></span>
+      <span class="badge p4">P4 / Info <span class="num">{{COUNT_P4}}</span></span>
+      <span class="badge clean">Clean repos <span class="num">{{COUNT_CLEAN}}</span></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="summary">Executive summary</button>
+      <button class="tab-btn" data-tab="repos">Repositories</button>
+      <button class="tab-btn" data-tab="findings">Findings</button>
+    </nav>
+
+    <section id="tab-summary" class="tab-panel active">
+      <div class="summary">{{SUMMARY_HTML}}</div>
+    </section>
+
+    <section id="tab-repos" class="tab-panel">
+      <div class="filter-bar">
+        <input type="search" id="filter-text" placeholder="Filter repositories by name…" />
+        <button class="tier-filter active" data-tier="all">All</button>
+        <button class="tier-filter" data-tier="p0">P0</button>
+        <button class="tier-filter" data-tier="p1">P1</button>
+        <button class="tier-filter" data-tier="p2">P2</button>
+        <button class="tier-filter" data-tier="p3">P3</button>
+        <button class="tier-filter" data-tier="p4">P4</button>
+        <button class="tier-filter" data-tier="clean">Clean</button>
+      </div>
+      <div class="repo-grid" id="repo-grid">{{REPO_ROWS_HTML}}</div>
+    </section>
+
+    <section id="tab-findings" class="tab-panel">
+      <div class="filter-bar">
+        <input type="search" id="ffilter-text" placeholder="Filter findings by title or ID…" />
+        <button class="ftier-filter active" data-tier="all">All</button>
+        <button class="ftier-filter" data-tier="p0">P0</button>
+        <button class="ftier-filter" data-tier="p1">P1</button>
+        <button class="ftier-filter" data-tier="p2">P2</button>
+        <button class="ftier-filter" data-tier="p3">P3</button>
+        <button class="ftier-filter" data-tier="p4">P4</button>
+      </div>
+      <div id="findings-root">{{FINDINGS_TAB_HTML}}</div>
+    </section>
+  </div>
+</main>
+
+<footer>{{FOOTER_TEXT}}</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="close" id="overlay-close" aria-label="Close">×</button>
+    <h2 id="overlay-title"></h2>
+    <div class="overlay-toolbar">
+      <button id="expand-all">Expand all</button>
+      <button id="collapse-all">Collapse all</button>
+    </div>
+    <div id="overlay-body"></div>
+  </div>
+</div>
+
+<script>
+const REPO_DETAIL = {{REPO_DETAIL_JSON}};
+
+// tabs
+for (const b of document.querySelectorAll('.tab-btn')) {
+  b.addEventListener('click', () => {
+    for (const x of document.querySelectorAll('.tab-btn')) x.classList.remove('active');
+    for (const p of document.querySelectorAll('.tab-panel')) p.classList.remove('active');
+    b.classList.add('active');
+    document.getElementById('tab-' + b.dataset.tab).classList.add('active');
+  });
+}
+
+// filter
+const input = document.getElementById('filter-text');
+let activeTier = 'all';
+function applyFilter() {
+  const q = input.value.trim().toLowerCase();
+  for (const row of document.querySelectorAll('.repo-row')) {
+    const tierOk = activeTier === 'all' || row.dataset.tier === activeTier;
+    const textOk = !q || row.dataset.search.includes(q);
+    row.style.display = tierOk && textOk ? '' : 'none';
+  }
+}
+input.addEventListener('input', applyFilter);
+for (const b of document.querySelectorAll('.tier-filter')) {
+  b.addEventListener('click', () => {
+    for (const x of document.querySelectorAll('.tier-filter')) x.classList.remove('active');
+    b.classList.add('active');
+    activeTier = b.dataset.tier;
+    applyFilter();
+  });
+}
+
+// findings-tab filter
+const finput = document.getElementById('ffilter-text');
+let factiveTier = 'all';
+function applyFindingsFilter() {
+  const q = finput.value.trim().toLowerCase();
+  for (const row of document.querySelectorAll('.finding-row')) {
+    const tierOk = factiveTier === 'all' || row.dataset.tier === factiveTier;
+    const textOk = !q || row.dataset.search.includes(q);
+    row.style.display = tierOk && textOk ? '' : 'none';
+  }
+  // Hide a repo group whose rows are all filtered out.
+  for (const g of document.querySelectorAll('.findings-group')) {
+    const anyVisible = [...g.querySelectorAll('.finding-row')].some(r => r.style.display !== 'none');
+    g.style.display = anyVisible ? '' : 'none';
+  }
+}
+if (finput) finput.addEventListener('input', applyFindingsFilter);
+for (const b of document.querySelectorAll('.ftier-filter')) {
+  b.addEventListener('click', () => {
+    for (const x of document.querySelectorAll('.ftier-filter')) x.classList.remove('active');
+    b.classList.add('active');
+    factiveTier = b.dataset.tier;
+    applyFindingsFilter();
+  });
+}
+
+// overlay
+const overlay = document.getElementById('overlay');
+const ob = document.getElementById('overlay-body');
+const ot = document.getElementById('overlay-title');
+function openRepo(slug, focusFid) {
+  ot.textContent = slug;
+  ob.innerHTML = REPO_DETAIL[slug] || '<p>No findings available.</p>';
+  overlay.classList.add('open');
+  ob.scrollTop = 0;
+  if (focusFid) {
+    const sel = '[data-fid="' + (window.CSS && CSS.escape ? CSS.escape(focusFid) : focusFid) + '"]';
+    const el = ob.querySelector(sel);
+    if (el) {
+      const d = el.querySelector('details');
+      if (d) d.open = true;
+      el.scrollIntoView({ block: 'start' });
+    }
+  }
+}
+for (const row of document.querySelectorAll('.repo-row')) {
+  row.addEventListener('click', () => openRepo(row.dataset.slug));
+}
+for (const row of document.querySelectorAll('.finding-row')) {
+  row.addEventListener('click', () => openRepo(row.dataset.slug, row.dataset.fid));
+}
+document.getElementById('overlay-close').addEventListener('click', () => overlay.classList.remove('open'));
+overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+document.getElementById('expand-all').addEventListener('click', () => { for (const d of ob.querySelectorAll('details')) d.open = true; });
+document.getElementById('collapse-all').addEventListener('click', () => { for (const d of ob.querySelectorAll('details')) d.open = false; });
+
+// Per-repo summary-table rows on the Executive-summary tab: clicking
+// a row opens that repo's findings modal (same as .repo-row cards).
+for (const tr of document.querySelectorAll('.repo-table tbody tr')) {
+  tr.addEventListener('click', () => openRepo(tr.dataset.slug));
+}
+</script>
+
+</body>
+</html>

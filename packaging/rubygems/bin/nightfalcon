@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+root = File.expand_path("../../..", __dir__)
+canonical_package = File.join(root, "src/nightfalcon")
+abort("nightfalcon: canonical Python package is missing") unless File.directory?(canonical_package)
+
+candidates = [ENV["NIGHTFALCON_PYTHON"], "python3", "python"].compact.uniq
+python = candidates.find do |candidate|
+  system(candidate, "-c", "import sys; raise SystemExit(sys.version_info < (3, 11))", out: File::NULL, err: File::NULL)
+end
+abort("nightfalcon: Python 3.11 or later is required") unless python
+
+python_path = File.join(root, "src")
+ENV["PYTHONPATH"] = [python_path, ENV["PYTHONPATH"]].compact.join(File::PATH_SEPARATOR)
+Dir.chdir(root)
+exec(python, "-m", "nightfalcon", *ARGV)

@@ -1,0 +1,23 @@
+class Nightfalcon < Formula
+  desc "Multi-client agentic security review harness"
+  homepage "https://github.com/intuit/nightfalcon"
+  url "https://github.com/intuit/nightfalcon/releases/download/v@VERSION@/nightfalcon-@VERSION@.pyz"
+  version "@VERSION@"
+  sha256 "@SHA256@"
+  license "Apache-2.0"
+
+  depends_on "python@3.11"
+
+  def install
+    libexec.install "nightfalcon-@VERSION@.pyz"
+    (bin/"nightfalcon").write <<~EOS
+      #!/bin/bash
+      exec "#{Formula["python@3.11"].opt_bin}/python3.11" "#{libexec}/nightfalcon-@VERSION@.pyz" "$@"
+    EOS
+  end
+
+  test do
+    assert_match "nightfalcon @VERSION@", shell_output("#{bin}/nightfalcon version")
+    system "#{bin}/nightfalcon", "version"
+  end
+end

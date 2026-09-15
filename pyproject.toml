@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nightfalcon"
+version = "3.0.0"
+description = "Multi-client agentic security review harness"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [
+  {name = "NightFalcon contributors"},
+]
+keywords = ["security", "agentic", "review", "static-analysis"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.scripts]
+nightfalcon = "nightfalcon.cli:entrypoint"
+
+[project.urls]
+Homepage = "https://github.com/intuit/nightfalcon"
+Repository = "https://github.com/intuit/nightfalcon"
+Issues = "https://github.com/intuit/nightfalcon/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nightfalcon = ["_payload-manifest.json", "_payloads/**/*"]

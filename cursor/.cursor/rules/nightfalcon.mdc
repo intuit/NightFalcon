@@ -1,0 +1,42 @@
+---
+description: NightFalcon adversarial security review — how the /nightfalcon skill, gates, and hooks fit together in this repo.
+alwaysApply: false
+---
+
+# NightFalcon (Cursor port)
+
+This repo contains the NightFalcon adversarial security-review pipeline for
+Cursor. It is driven by the `/nightfalcon` skill
+(`.cursor/skills/nightfalcon/SKILL.md`), NOT by ad-hoc analysis.
+
+- Run a review with `/nightfalcon <repo-url…>` (or `/nightfalcon --triage
+  <findings-file>`). The skill is the orchestrator; it spawns one
+  context-isolated subagent per phase and enforces order with shell gates.
+- **Never bypass the gate scripts.** `scripts/check-gate.sh` runs before every
+  phase and `scripts/complete-phase.sh` after; exit 2 = BLOCKED. `state.json`
+  is the source of truth for `current_phase` / `repo_slugs` / `phase_status`.
+- **Hooks** (`.cursor/hooks.json`): `beforeShellExecution` (gate-guard, blocks
+  shell tampering with review state), `afterFileEdit` (edit-log, advisory
+  only — Cursor cannot block edits), `stop` (stop-enforce, nudges phase
+  completion via `followup_message`). All are no-ops outside a workspace with
+  both `.nightfalcon-review` and canonical `state.json`; nested working
+  directories resolve back to that initialized workspace.
+- **Workspace is always `$PWD`.** Artifacts land under `findings/<slug>/`,
+  `output/`, and PoCs under `output/proof_of_concept/<slug>/`. Cloned source is
+  `sourcecode/<slug>/` (gitignored).
+- **Enums are authoritative** (`references/enums.md`): tiers `P0..P4` (the
+  report also shows the severity word, e.g. `P0 (Critical)`); dispositions
+  `CONFIRMED | CONFIRMED-MODIFIED | DISMISSED | NEEDS-REVIEW`; exposure
+  `EXTERNAL | INTERNAL | INTERNAL-RESTRICTED` (§17); PoC verdicts `VALID |
+  NEEDS-REVISION | INVALID`.
+- **PoCs are self-contained**: each script declares its parameters inline
+  (prefilled where safe, blank `# FILL:` otherwise) and does NOT source a
+  shared config to run. One per-repo `POC-GUIDE-<DATE>.md` documents every
+  PoC's parameters; `poc-config.env` is a reference catalog only. PoCs cover
+  P0/P1/P2 only — never Low (P3) / Informational (P4).
+- **Model**: never selected or switched by the plugin; omit the `model`
+  argument and every reasoning override so every spawn uses the user's
+  currently-selected Cursor model, never downgraded.
+
+See `README.md` for install and `references/context-scope.md` for what each
+phase reads and writes.

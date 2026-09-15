@@ -1,0 +1,13 @@
+# Cloned source trees (phase-0 clones them; large, not part of the audit trail)
+sourcecode/
+# Workspace review artifacts are generated per-run, not part of the plugin
+findings/
+output/
+input/
+state.json
+state-derived-summary.json
+.agent-spawns/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/

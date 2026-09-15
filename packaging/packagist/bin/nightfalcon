@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+$root = realpath(__DIR__ . '/../../..');
+$canonicalPackage = $root . '/src/nightfalcon';
+if (!is_dir($canonicalPackage)) {
+    fwrite(STDERR, "nightfalcon: canonical Python package is missing\n");
+    exit(1);
+}
+$candidates = array_values(array_filter([getenv('NIGHTFALCON_PYTHON'), 'python3', 'python']));
+$python = null;
+foreach ($candidates as $candidate) {
+    $command = escapeshellarg($candidate) . " -c " . escapeshellarg('import sys; raise SystemExit(sys.version_info < (3, 11))');
+    exec($command, $ignored, $status);
+    if ($status === 0) {
+        $python = $candidate;
+        break;
+    }
+}
+if ($python === null) {
+    fwrite(STDERR, "nightfalcon: Python 3.11 or later is required\n");
+    exit(1);
+}
+$separator = PHP_OS_FAMILY === 'Windows' ? ';' : ':';
+$existing = getenv('PYTHONPATH');
+putenv('PYTHONPATH=' . $root . '/src' . ($existing ? $separator . $existing : ''));
+$arguments = array_map('escapeshellarg', array_slice($argv, 1));
+$command = 'cd ' . escapeshellarg($root) . ' && ' . escapeshellarg($python) . ' -m nightfalcon ' . implode(' ', $arguments);
+passthru($command, $status);
+exit($status);

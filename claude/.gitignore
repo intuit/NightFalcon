@@ -1,0 +1,32 @@
+# macOS Finder metadata
+.DS_Store
+
+# Claude Code local session/config artifacts — never commit
+.claude/
+.claude/**
+
+# CodeGraph runtime DBs and sockets — local, regenerated per machine
+.codegraph/
+
+# Python bytecode caches
+__pycache__/
+*.pyc
+
+# Review run artifacts — these are produced when the plugin runs inside a
+# workspace; they must never be committed to the plugin repo itself.
+state.json
+state-derived-summary.json
+/input/
+/output/
+/sourcecode/
+/findings/
+/proof_of_concept/
+run-log-*.md
+
+# Optional external knowledgebase — adopters may populate references/knowledgebase/
+# with their own private platform docs; keep private content out of the plugin repo.
+# (Delete these lines if you intend to ship a public KB with the plugin.)
+references/knowledgebase/*
+!references/knowledgebase/README.md
+!references/knowledgebase/example/
+!references/knowledgebase/example/**

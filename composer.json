@@ -1,0 +1,12 @@
+{
+  "name": "intuit/nightfalcon",
+  "description": "Multi-client agentic security review harness",
+  "type": "library",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/intuit/nightfalcon",
+  "bin": ["packaging/packagist/bin/nightfalcon"],
+  "support": {
+    "issues": "https://github.com/intuit/nightfalcon/issues",
+    "source": "https://github.com/intuit/nightfalcon"
+  }
+}

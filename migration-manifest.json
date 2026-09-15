@@ -1,0 +1,48 @@
+{
+  "excluded_commitment_sha256": "fa6fe950c04ad152b6ce565886d03ead05b3d8e192f077a83b151ba3ec85b997",
+  "exclusions": {
+    "cache_artifacts": {
+      "file_count": 61,
+      "sha256": "888b29024675f762299d5c02cb343188243f15c9578aed9e2b46ba343068d7a7"
+    },
+    "category_commitments": {
+      "generated_evidence": {
+        "file_count": 11,
+        "sha256": "96f12ec8aa3e94e92562179a163f3589a1066dd854d2ab3bb92dc67fcaf55170"
+      },
+      "internal_work_products": {
+        "file_count": 52,
+        "sha256": "5c3ae280f2465d256c974b28f7c43dd0d1a5ca09481a9eaf6ef7924a9ce74a63"
+      },
+      "private_context": {
+        "file_count": 3837,
+        "sha256": "3d6ff2b9499eeaf271c5753285f6aa5abb51b6d4b19747d4aa23507ef141f5bb"
+      }
+    },
+    "policy": "exclude organization-private context, internal work products, generated source evidence, and caches"
+  },
+  "migration_properties": {
+    "legacy_workspace_adapter": "read-only-non-mutating",
+    "organization_context_provider": "optional-public-schema-v2",
+    "private_context_removed": true
+  },
+  "port_sha256": {
+    "claude": "954e16b2c10f951152b48c7d99c5204153c21aaab7ec2f8318a51b351c08fdf7",
+    "codex": "9232f81d6c96b262b83aa7d008501cbeac9a05b63e5d98e51a0856fbde627824",
+    "cursor": "5a898919daaee21863a44abc8d23410dffcee5eb8c3e4b22d2ac7c666618c9ab"
+  },
+  "ports": [
+    "claude",
+    "codex",
+    "cursor"
+  ],
+  "release_file_count": 369,
+  "release_scope_exclusions": [
+    "codex/docs/verification-report.md",
+    "codex/verification-results.json",
+    "migration-manifest.json"
+  ],
+  "release_sha256": "079fde1857adbdcd6bafcae186c594ef014896047d1ed8ca18eff987650fad09",
+  "schema_version": "2",
+  "source_commit": "0c3183e02ec1f1500115233402cabdf7808ec4e6"
+}
