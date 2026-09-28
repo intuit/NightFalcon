@@ -1,4 +1,4 @@
-# NightFalcon Agentic Security Harness
+# NightFalcon: Intuit Agentic Security Harness
 
 NightFalcon is an open-source, multi-client harness for deep adversarial security review. One enforced nine-phase workflow runs in Claude Code, Codex, or Cursor and produces evidence-backed findings, blind Devil's Advocate adjudication, proof-of-concept review, SARIF, per-repository reports, and a cross-repository executive report.
 
