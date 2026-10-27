@@ -89,7 +89,7 @@ def main() -> int:
                 print(stage)
             return 0
         with tempfile.TemporaryDirectory(prefix="nightfalcon-debian-") as temporary:
-            stage = Path(temporary) / "nightfalcon-3.0.0"
+            stage = Path(temporary) / "nightfalcon-1.0.0"
             stage_source(repo, stage)
             build(stage, args.output_dir.resolve())
         return 0

@@ -9,14 +9,14 @@
         {
           "classification": "ADAPTED",
           "destination": ".claude-plugin/marketplace.json",
-          "destination_sha256": "30eafbb35ca2cff5e023e017c9ef3876635a8235172baec0f84780044570220e",
+          "destination_sha256": "09087c56ad290b6a6e8803bce98c35ad07174027b2f911fae3aaa41658e3d4a8",
           "source": ".claude-plugin/marketplace.json",
           "source_sha256": "2d7ace316e8d7a2a3d8e21c5225ce229998ee06c56554a01d7fca5c6a8e1fc70"
         },
         {
           "classification": "ADAPTED",
           "destination": ".claude-plugin/plugin.json",
-          "destination_sha256": "c55dad0bdc80402d46e1930532a9febe5ba91f70f1a52e83dbc1d2af21f16904",
+          "destination_sha256": "6a446a56d61b3861d83be76e5860281687faef5c3279735bb1b8d04e5836487e",
           "source": ".claude-plugin/plugin.json",
           "source_sha256": "2387b4365539559c5a04cca30bc2f859178883f940201abf083cd7533f7093b2"
         },
@@ -617,14 +617,14 @@
         {
           "classification": "ADAPTED",
           "destination": "migration-map.json",
-          "destination_sha256": "17422a3e10b33d48bb74e73e8522f31ffe5c5ef6e4e7609b4b294754982ebbf2",
+          "destination_sha256": "52f8f7faf934d9aa1532c63604f831d0884b2f174f9936eec983f8d0f3fb977d",
           "source": "migration-map.json",
           "source_sha256": "89ad4ffcb6be0e077a2d5de956063482ce2e71d39a5c67e109e6ffcb843f51c6"
         },
         {
           "classification": "PUBLIC_ADDITION",
           "destination": "plugins/nightfalcon/.codex-plugin/plugin.json",
-          "destination_sha256": "030735f745c178f39ef31399a21f8c59a22131a3794418916b91fbce9029fb14",
+          "destination_sha256": "228398f84f6d58c5889c7bf15114c0eadf7c04bd04cd8db99d17d24393b72a6e",
           "source": null,
           "source_sha256": null
         },
@@ -1247,7 +1247,7 @@
         {
           "classification": "ADAPTED",
           "destination": "tests/test_distribution.py",
-          "destination_sha256": "a47f8712a5104e68e0c4d7e47625377b5e7f729943c5737b219313ba8ba9bc8c",
+          "destination_sha256": "49f2ef6e4c36a3b86e73bc3044ba16829306ae7c069102aad1500ed8a069563f",
           "source": "tests/test_distribution.py",
           "source_sha256": "3af7472b92ddf51315a356b25810ba79d63e9620394d168040ba338309c26210"
         },
@@ -1394,9 +1394,9 @@
           "source_sha256": "27c0888f1fc5608c920c73bfd8835d8e705bbf7dacdc3cd6122efa59ace61377"
         },
         {
-          "classification": "ADAPTED",
+          "classification": "UNCHANGED",
           "destination": "VERSION",
-          "destination_sha256": "2985be8b28d3ade858e8d8fb4bc22f565b1bf6020dff982dce141f7721b9999c",
+          "destination_sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
           "source": "VERSION",
           "source_sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03"
         },

@@ -22,7 +22,7 @@ class ClientContractTests(unittest.TestCase):
         plan = InstallPlan(
             client="codex",
             source=Path("/payload/codex"),
-            destination=Path("/data/codex/3.0.0"),
+            destination=Path("/data/codex/1.0.0"),
             conflicts=(),
             instructions=("codex plugin list",),
         )

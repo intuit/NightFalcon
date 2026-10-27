@@ -1,6 +1,6 @@
 {
   "name": "nightfalcon",
-  "version": "3.0.0+codex.20260902000000",
+  "version": "1.0.0+codex.20260902000000",
   "description": "Multi-phase adversarial security review with enforced sequencing, blind debate, PoC generation, and validation for Codex.",
   "author": {
     "name": "NightFalcon contributors",

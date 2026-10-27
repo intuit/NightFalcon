@@ -48,9 +48,9 @@ class ReceiptTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "receipt.json"
             receipt = InstallReceipt(
-                version="3.0.0",
+                version="1.0.0",
                 client="codex",
-                destination=str(Path(temporary) / "versions/3.0.0/codex"),
+                destination=str(Path(temporary) / "versions/1.0.0/codex"),
                 manifest_sha256="a" * 64,
                 paths=("plugin.json", "skills/nightfalcon/SKILL.md"),
                 created_at="2026-09-02T00:00:00Z",
@@ -78,7 +78,7 @@ class ReceiptTests(unittest.TestCase):
             with self.subTest(paths=paths, digest=digest):
                 with self.assertRaises(ReceiptError):
                     InstallReceipt(
-                        version="3.0.0",
+                        version="1.0.0",
                         client="claude",
                         destination="/tmp/nightfalcon/claude",
                         manifest_sha256=digest,
@@ -97,8 +97,8 @@ class FilesystemSafetyTests(unittest.TestCase):
             outside.mkdir()
 
             self.assertEqual(
-                validate_destination(root / "versions/3.0.0", root),
-                (root / "versions/3.0.0").resolve(strict=False),
+                validate_destination(root / "versions/1.0.0", root),
+                (root / "versions/1.0.0").resolve(strict=False),
             )
             for destination in (root, outside, root / "../outside"):
                 with self.subTest(destination=destination):
@@ -133,14 +133,14 @@ class FilesystemSafetyTests(unittest.TestCase):
     def test_uninstall_removes_only_receipt_owned_paths(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / "owned"
-            destination = root / "versions/3.0.0/claude"
+            destination = root / "versions/1.0.0/claude"
             destination.mkdir(parents=True)
             owned = destination / "plugin.json"
             retained = destination / "user.txt"
             owned.write_text("owned")
             retained.write_text("user")
             receipt = InstallReceipt(
-                version="3.0.0",
+                version="1.0.0",
                 client="claude",
                 destination=str(destination),
                 manifest_sha256="b" * 64,
@@ -155,7 +155,7 @@ class FilesystemSafetyTests(unittest.TestCase):
             self.assertTrue(retained.exists())
 
             outside_receipt = InstallReceipt(
-                version="3.0.0",
+                version="1.0.0",
                 client="claude",
                 destination=str(Path(temporary) / "outside"),
                 manifest_sha256="b" * 64,

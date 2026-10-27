@@ -34,10 +34,10 @@ process. Pushing a tag does not build or publish artifacts.
 ## Registry ownership
 
 Use organization-controlled publisher accounts with phishing-resistant MFA,
-least-privilege tokens, multiple maintainers, and recovery contacts. Use an approved manual publishing process for PyPI. Apply an equivalent
-protected release process to
-npm, crates.io, RubyGems, NuGet, Maven Central, Packagist, Homebrew tap, and APT
-repository. Availability checks alone provide no ownership.
+least-privilege tokens, multiple maintainers, and recovery contacts. Use an
+approved, protected manual publishing process for npm and for GitHub release
+assets (`.pyz`, `.deb`, checksums, SBOM) consumed by in-repository Homebrew
+formula and Debian installs. Go installs resolve directly from public signed `v<version>` tags. Availability checks alone provide no ownership.
 
 Never reuse personal access token across registries. Never place credentials
 in repository, workflow variables readable by pull requests, package archives,

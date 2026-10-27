@@ -93,7 +93,7 @@ class CliTests(unittest.TestCase):
                 stderr=StringIO(),
             )
 
-            destination = home / ".local/share/nightfalcon/versions/3.0.0/claude"
+            destination = home / ".local/share/nightfalcon/versions/1.0.0/claude"
             self.assertEqual(installed, 0)
             self.assertTrue((destination / ".claude-plugin/plugin.json").is_file())
             self.assertIn("/plugin install nightfalcon@nightfalcon-local", stdout.getvalue())
@@ -133,7 +133,7 @@ class CliTests(unittest.TestCase):
             home = Path(temporary) / "home"
             home.mkdir()
             env = self._env(home)
-            destination = home / ".local/share/nightfalcon/versions/3.0.0/codex"
+            destination = home / ".local/share/nightfalcon/versions/1.0.0/codex"
             self.assertEqual(
                 main(
                     ["install", "codex", "--yes"],

@@ -1,6 +1,6 @@
 {
   "name": "nightfalcon",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "description": "Multi-client agentic security review harness",
   "license": "Apache-2.0",
   "repository": {

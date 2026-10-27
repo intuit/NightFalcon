@@ -9,7 +9,7 @@
       "name": "nightfalcon",
       "source": "./",
       "description": "Multi-phase adversarial security review with enforced phase sequencing, debate, PoC generation, and validation.",
-      "version": "3.0.0"
+      "version": "1.0.0"
     }
   ]
 }

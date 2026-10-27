@@ -9,38 +9,32 @@ or first accepted publication does.
 
 | Channel | Public coordinate | Install command |
 |---|---|---|
-| PyPI | `nightfalcon` | `pip install nightfalcon` |
-| Homebrew Core | `nightfalcon` | `brew install nightfalcon` |
-| Homebrew tap | `intuit/tap/nightfalcon` | `brew install intuit/tap/nightfalcon` |
 | npm | `nightfalcon` | `npm install -g nightfalcon` |
-| crates.io | `nightfalcon` | `cargo install nightfalcon` |
+| npx | `nightfalcon` | `npx nightfalcon <command>` |
 | Go | `github.com/intuit/nightfalcon/cmd/nightfalcon` | `go install github.com/intuit/nightfalcon/cmd/nightfalcon@latest` |
-| RubyGems | `nightfalcon` | `gem install nightfalcon` |
-| NuGet | `nightfalcon` | `dotnet tool install --global nightfalcon` |
-| Packagist | `intuit/nightfalcon` | `composer global require intuit/nightfalcon` |
-| Maven Central | `com.intuit:nightfalcon` | Use Maven or Gradle dependency coordinate |
-| Debian/Ubuntu APT | package `nightfalcon` | `apt install nightfalcon` after repository setup |
+| Homebrew | `intuit/nightfalcon/nightfalcon` | `brew tap intuit/nightfalcon https://github.com/intuit/NightFalcon` then `brew install intuit/nightfalcon/nightfalcon` |
+| Debian/Ubuntu APT | release asset `nightfalcon_<version>-1_all.deb` | `sudo apt install ./nightfalcon_<version>-1_all.deb` |
 
-Plain `brew install nightfalcon` requires formula acceptance into Homebrew
-Core. Until then, Intuit tap command is supported route. Plain `apt install`
-requires an APT repository signed and configured by distributor. GitHub and
-GitLab project names distribute source but do not reserve registry names.
+This repository is its own Homebrew tap: `Formula/nightfalcon.rb` installs the
+checksum-bound `.pyz` attached to the matching GitHub release. The Debian
+package is published as a GitHub release asset rather than through a signed
+APT repository, so download it and verify its SHA-256 before installation.
+Debian packages require Debian 12 or Ubuntu 24.04 or later for Python 3.11.
 
-All launchers require Python 3.11 or later. Java package requires Java 17 or
-later; NuGet global tool requires .NET 8; npm launcher requires Node.js 18 or
-later. Packages do not download executable code at runtime.
+All launchers require Python 3.11 or later. npm launcher requires Node.js 18 or
+later; Go installation requires Go 1.22 or later. Packages do not download
+executable code at runtime.
 
 ## Repository artifacts
 
-- `pyproject.toml` builds PyPI wheel and source archive.
-- `package.json` builds npm package.
-- `Cargo.toml` builds crates.io package.
+- `pyproject.toml` defines canonical Python CLI used by universal executable.
+- `package.json` builds npm package, also used by `npx`.
 - `go.mod` and `cmd/nightfalcon` support Go installation.
-- `nightfalcon.gemspec` builds RubyGem.
-- `composer.json` defines Packagist package.
-- `pom.xml` builds Maven artifact.
-- `packaging/nuget/NightFalcon.csproj` builds .NET global tool.
-- `packaging/homebrew` renders checksum-bound Homebrew formula.
+- `packaging/homebrew` renders checksum-bound `Formula/nightfalcon.rb`; re-render
+  and commit it whenever the release `.pyz` changes.
+- `packaging/homebrew/core/nightfalcon.rb.template` is source-build formula
+  reserved for a future `Homebrew/homebrew-core` submission. Core requires a
+  notable repository (75 stars, or 225 when self-submitted) before acceptance.
 - `packaging/debian` builds Debian package around offline universal executable.
 
 GitHub Actions automation is currently removed. Build and verify artifacts
