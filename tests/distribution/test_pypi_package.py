@@ -30,8 +30,8 @@ class PypiPackageTests(unittest.TestCase):
                 check=False,
             )
             self.assertEqual(built.returncode, 0, built.stderr)
-            wheel = output / "nightfalcon-3.0.0-py3-none-any.whl"
-            sdist = output / "nightfalcon-3.0.0.tar.gz"
+            wheel = output / "nightfalcon-1.0.0-py3-none-any.whl"
+            sdist = output / "nightfalcon-1.0.0.tar.gz"
             self.assertTrue(wheel.is_file())
             self.assertTrue(sdist.is_file())
 
@@ -66,7 +66,7 @@ class PypiPackageTests(unittest.TestCase):
                 [str(command), "version"], text=True, capture_output=True, check=False
             )
             self.assertEqual(version.returncode, 0, version.stderr)
-            self.assertEqual(version.stdout, "nightfalcon 3.0.0\n")
+            self.assertEqual(version.stdout, "nightfalcon 1.0.0\n")
 
             home = base / "home"
             home.mkdir()

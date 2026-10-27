@@ -4,7 +4,7 @@
     {
       "classification": "ADAPTED",
       "destination": ".codex-plugin/plugin.json",
-      "destination_sha256": "e65a5d2b445051c625015418807de457d44391629b539fcc5c9978ce3a30a2f4",
+      "destination_sha256": "228398f84f6d58c5889c7bf15114c0eadf7c04bd04cd8db99d17d24393b72a6e",
       "reason": "Adapted for public distribution.",
       "sha256": "0623da09310e0e0d30f1ae24a2dbe743ba9db59fb0e0d05dedf9abe2e0292921",
       "source": ".codex-plugin/plugin.json"

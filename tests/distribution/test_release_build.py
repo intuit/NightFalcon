@@ -28,7 +28,7 @@ class ReleaseBuildTests(unittest.TestCase):
             check=False,
         )
         self.assertEqual(result.returncode, 0, result.stderr)
-        return output / "nightfalcon-3.0.0.pyz"
+        return output / "nightfalcon-1.0.0.pyz"
 
     def test_two_builds_are_byte_identical_with_normalized_zip_metadata(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -126,19 +126,19 @@ class ReleaseBuildTests(unittest.TestCase):
             )
 
             self.assertEqual(version.returncode, 0, version.stderr)
-            self.assertEqual(version.stdout, "nightfalcon 3.0.0\n")
+            self.assertEqual(version.stdout, "nightfalcon 1.0.0\n")
             self.assertEqual(installed.returncode, 0, installed.stderr)
-            destination = data_root(env, sys.platform) / "versions/3.0.0/claude"
+            destination = data_root(env, sys.platform) / "versions/1.0.0/claude"
             self.assertTrue((destination / ".claude-plugin/plugin.json").is_file())
 
     def test_release_contains_checksum_manifest_and_spdx_sbom(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "release"
             artifact = self._build(output)
-            checksum = (output / "nightfalcon-3.0.0.pyz.sha256").read_text().strip()
+            checksum = (output / "nightfalcon-1.0.0.pyz.sha256").read_text().strip()
             expected = hashlib.sha256(artifact.read_bytes()).hexdigest()
             release = json.loads((output / "release-manifest.json").read_text())
-            sbom = json.loads((output / "nightfalcon-3.0.0.spdx.json").read_text())
+            sbom = json.loads((output / "nightfalcon-1.0.0.spdx.json").read_text())
 
             self.assertEqual(checksum, f"{expected}  {artifact.name}")
             artifacts = {item["name"]: item for item in release["artifacts"]}
@@ -148,9 +148,9 @@ class ReleaseBuildTests(unittest.TestCase):
                 {path.name for path in output.iterdir() if path.name != "release-manifest.json"},
             )
             self.assertEqual(release["schema_version"], 2)
-            self.assertEqual(release["version"], "3.0.0")
+            self.assertEqual(release["version"], "1.0.0")
             self.assertEqual(sbom["spdxVersion"], "SPDX-2.3")
-            self.assertEqual(sbom["packages"][0]["versionInfo"], "3.0.0")
+            self.assertEqual(sbom["packages"][0]["versionInfo"], "1.0.0")
             self.assertGreater(len(sbom["files"]), 100)
 
 

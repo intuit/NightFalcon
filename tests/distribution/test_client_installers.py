@@ -50,7 +50,7 @@ class ClientInstallerTests(unittest.TestCase):
             ]:
                 with self.subTest(client=client):
                     source = self._fixture(base / client, client)
-                    destination = root / "versions" / "3.0.0" / client
+                    destination = root / "versions" / "1.0.0" / client
                     adapter = adapter_type(root=root, which=lambda _: None)
                     plan = adapter.plan(source, destination)
 
@@ -74,7 +74,7 @@ class ClientInstallerTests(unittest.TestCase):
             root = base / "data"
             root.mkdir()
             source = self._fixture(base, "claude")
-            destination = root / "versions/3.0.0/claude"
+            destination = root / "versions/1.0.0/claude"
             destination.mkdir(parents=True)
             (destination / "user-file").write_text("mine")
             adapter = ClaudeAdapter(root=root, which=lambda _: None)
@@ -93,7 +93,7 @@ class ClientInstallerTests(unittest.TestCase):
             root = base / "data"
             root.mkdir()
             source = self._fixture(base, "codex")
-            destination = root / "versions/3.0.0/codex"
+            destination = root / "versions/1.0.0/codex"
             adapter = CodexAdapter(root=root, which=lambda _: None)
             receipt = adapter.install(adapter.plan(source, destination))
             (source / "nested/runtime.py").write_text("print('updated')\n")
@@ -110,7 +110,7 @@ class ClientInstallerTests(unittest.TestCase):
             root = base / "data"
             root.mkdir()
             source = self._fixture(base, "codex")
-            destination = root / "versions/3.0.0/codex"
+            destination = root / "versions/1.0.0/codex"
             adapter = CodexAdapter(root=root, which=lambda _: None)
             original = adapter.install(adapter.plan(source, destination))
             original_bytes = (destination / "nested/runtime.py").read_bytes()
@@ -136,10 +136,10 @@ class ClientInstallerTests(unittest.TestCase):
             cursor_source = self._fixture(base / "cursor", "cursor")
 
             claude = ClaudeAdapter(root=root, which=lambda _: None).plan(
-                claude_source, root / "versions/3.0.0/claude"
+                claude_source, root / "versions/1.0.0/claude"
             )
             codex = CodexAdapter(root=root, which=lambda _: None).plan(
-                codex_source, root / "versions/3.0.0/codex"
+                codex_source, root / "versions/1.0.0/codex"
             )
 
             self.assertTrue(any("nightfalcon-local" in item for item in claude.instructions))

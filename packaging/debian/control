@@ -1,7 +1,7 @@
 Source: nightfalcon
 Section: devel
 Priority: optional
-Maintainer: NightFalcon contributors
+Maintainer: Abhinav Verma <cehabhinavverma@gmail.com>
 Build-Depends: debhelper-compat (= 13), python3 (>= 3.11)
 Standards-Version: 4.7.0
 Rules-Requires-Root: no

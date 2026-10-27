@@ -11,7 +11,7 @@ class DistributionTests(unittest.TestCase):
         manifest = json.loads((PLUGIN / ".codex-plugin" / "plugin.json").read_text())
         self.assertEqual(PLUGIN.name, "nightfalcon")
         self.assertEqual(manifest["name"], PLUGIN.name)
-        self.assertRegex(manifest["version"], r"^3\.0\.0\+codex\.20260902\d{6}$")
+        self.assertRegex(manifest["version"], r"^1\.0\.0\+codex\.20260902\d{6}$")
         self.assertEqual(manifest["skills"], "./skills/")
         self.assertNotIn("hooks", manifest)
 

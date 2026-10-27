@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nightfalcon"
-version = "3.0.0"
+version = "1.0.0"
 description = "Multi-client agentic security review harness"
 readme = "README.md"
 requires-python = ">=3.11"

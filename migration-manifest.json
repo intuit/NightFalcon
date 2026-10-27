@@ -27,22 +27,22 @@
     "private_context_removed": true
   },
   "port_sha256": {
-    "claude": "954e16b2c10f951152b48c7d99c5204153c21aaab7ec2f8318a51b351c08fdf7",
-    "codex": "9232f81d6c96b262b83aa7d008501cbeac9a05b63e5d98e51a0856fbde627824",
-    "cursor": "5a898919daaee21863a44abc8d23410dffcee5eb8c3e4b22d2ac7c666618c9ab"
+    "claude": "1d39ccdb0f3263dca725dbb3fd1fa775175dd657dca6718ccd81c932255b4fd4",
+    "codex": "bdd341e7a1c2d3d58111be5ff04cee0b018d7d13b9f0f744c6973d1c02c381cd",
+    "cursor": "7c0fd817b7455c519f84989e378d6fff6d70e728895ac3cc36054154b8ef16b9"
   },
   "ports": [
     "claude",
     "codex",
     "cursor"
   ],
-  "release_file_count": 369,
+  "release_file_count": 360,
   "release_scope_exclusions": [
     "codex/docs/verification-report.md",
     "codex/verification-results.json",
     "migration-manifest.json"
   ],
-  "release_sha256": "079fde1857adbdcd6bafcae186c594ef014896047d1ed8ca18eff987650fad09",
+  "release_sha256": "f60aed1f2c1c4b2e0844c94339cd15227ac937ea7487f45cf1768786843a693b",
   "schema_version": "2",
   "source_commit": "0c3183e02ec1f1500115233402cabdf7808ec4e6"
 }

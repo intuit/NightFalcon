@@ -10,7 +10,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[2]
-VERSION = "3.0.0"
+VERSION = "1.0.0"
 REPOSITORY = "https://github.com/intuit/nightfalcon"
 
 

@@ -32,7 +32,7 @@ class SystemPackageTests(unittest.TestCase):
                 check=False,
             )
             self.assertEqual(build.returncode, 0, build.stderr)
-            artifact = release / "nightfalcon-3.0.0.pyz"
+            artifact = release / "nightfalcon-1.0.0.pyz"
             formula = base / "nightfalcon.rb"
             render = subprocess.run(
                 [
@@ -52,9 +52,10 @@ class SystemPackageTests(unittest.TestCase):
             text = formula.read_text()
             self.assertIn(hashlib.sha256(artifact.read_bytes()).hexdigest(), text)
             self.assertIn('depends_on "python@3.11"', text)
-            self.assertIn("nightfalcon-3.0.0.pyz", text)
+            self.assertIn("nightfalcon-1.0.0.pyz", text)
             self.assertIn('system "#{bin}/nightfalcon", "version"', text)
             self.assertNotIn("@SHA256@", text)
+            self.assertEqual((ROOT / "Formula/nightfalcon.rb").read_text(), text)
             if shutil.which("ruby"):
                 parsed = subprocess.run(
                     ["ruby", "-c", str(formula)], text=True, capture_output=True, check=False
@@ -64,7 +65,7 @@ class SystemPackageTests(unittest.TestCase):
     def test_debian_metadata_installs_offline_zipapp_with_exact_name(self) -> None:
         control = (ROOT / "packaging/debian/control").read_text()
         rules = (ROOT / "packaging/debian/rules").read_text()
-        wrapper = (ROOT / "packaging/debian/nightfalcon").read_text()
+        wrapper = (ROOT / "packaging/debian/nightfalcon-launcher").read_text()
         changelog = (ROOT / "packaging/debian/changelog").read_text()
 
         self.assertIn("Source: nightfalcon", control)
@@ -73,7 +74,7 @@ class SystemPackageTests(unittest.TestCase):
         self.assertIn("Depends: python3 (>= 3.11)", control)
         self.assertIn("build-zipapp.py", rules)
         self.assertIn("/usr/lib/nightfalcon/nightfalcon.pyz", wrapper)
-        self.assertIn("nightfalcon (3.0.0-1)", changelog)
+        self.assertIn("nightfalcon (1.0.0-1)", changelog)
         combined = "\n".join((control, rules, wrapper))
         self.assertNotIn("curl ", combined)
         self.assertNotIn("wget ", combined)
@@ -119,7 +120,7 @@ class SystemPackageTests(unittest.TestCase):
                 check=False,
             )
             self.assertEqual(build.returncode, 0, build.stderr)
-            self.assertTrue((release / "nightfalcon-3.0.0.pyz").is_file())
+            self.assertTrue((release / "nightfalcon-1.0.0.pyz").is_file())
 
 
 if __name__ == "__main__":
